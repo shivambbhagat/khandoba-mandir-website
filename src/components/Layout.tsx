@@ -10,6 +10,9 @@ const translations = {
     history: 'इतिहास आणि महत्त्व',
     visit: 'दर्शन योजना',
     contact: 'संपर्क आणि दान',
+    jagaranGondal: 'जागरण गोंदल',
+    abhishek: 'अभिषेक',
+    gallery: 'फोटो गॅलरी',
     temple: 'श्री खंडोबा मंदिर',
     location: 'निमगाव-दावडी'
   },
@@ -18,6 +21,9 @@ const translations = {
     history: 'History & Significance',
     visit: 'Plan Your Visit',
     contact: 'Contact & Donations',
+    jagaranGondal: 'Jagaran Gondal',
+    abhishek: 'Abhishek',
+    gallery: 'Photo Gallery',
     temple: 'Shri Khandoba Temple',
     location: 'Nimgaon-Davadi'
   },
@@ -26,6 +32,9 @@ const translations = {
     history: 'इतिहास और महत्व',
     visit: 'दर्शन योजना',
     contact: 'संपर्क और दान',
+    jagaranGondal: 'जागरण गोंदल',
+    abhishek: 'अभिषेक',
+    gallery: 'फोटो गैलरी',
     temple: 'श्री खंडोबा मंदिर',
     location: 'निमगांव-दावडी'
   }
@@ -47,7 +56,10 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     { path: '/', label: t.home },
     { path: '/history', label: t.history },
     { path: '/visit', label: t.visit },
-    { path: '/contact', label: t.contact }
+    { path: '/contact', label: t.contact },
+    { path: '/jagaran-gondal', label: t.jagaranGondal },
+    { path: '/abhishek', label: t.abhishek },
+    { path: '/gallery', label: t.gallery }
   ];
 
   return (
