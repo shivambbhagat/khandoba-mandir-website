@@ -1,8 +1,9 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram, Facebook, Youtube } from 'lucide-react';
 import { useState } from 'react';
+import khandobaLogo from '@/assets/khandoba-logo.jpeg';
 
 const translations = {
   mr: {
@@ -70,9 +71,11 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl font-bold text-primary-foreground shadow-lg">
-                ॐ
-              </div>
+              <img 
+                src={khandobaLogo} 
+                alt="Shri Khandoba" 
+                className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-primary"
+              />
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-foreground">{t.temple}</span>
                 <span className="text-sm text-muted-foreground">{t.location}</span>
@@ -96,8 +99,39 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               ))}
             </nav>
 
-            {/* Language Selector & Mobile Menu */}
-            <div className="flex items-center gap-2">
+            {/* Social Media & Language Selector & Mobile Menu */}
+            <div className="flex items-center gap-3">
+              {/* Social Media Links */}
+              <div className="hidden md:flex items-center gap-2">
+                <a 
+                  href="https://instagram.com/nimgaon_cha_raja" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5 text-foreground" />
+                </a>
+                <a 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-5 h-5 text-foreground" />
+                </a>
+                <a 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-5 h-5 text-foreground" />
+                </a>
+              </div>
+
               <div className="flex gap-1 bg-muted rounded-lg p-1">
                 {(['mr', 'en', 'hi'] as Language[]).map((lang) => (
                   <Button
