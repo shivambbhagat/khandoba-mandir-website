@@ -99,39 +99,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               ))}
             </nav>
 
-            {/* Social Media & Language Selector & Mobile Menu */}
-            <div className="flex items-center gap-3">
-              {/* Social Media Links */}
-              <div className="hidden md:flex items-center gap-2">
-                <a 
-                  href="https://instagram.com/nimgaon_cha_raja" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 hover:bg-muted rounded-full transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 h-5 text-foreground" />
-                </a>
-                <a 
-                  href="#" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 hover:bg-muted rounded-full transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-5 h-5 text-foreground" />
-                </a>
-                <a 
-                  href="#" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-2 hover:bg-muted rounded-full transition-colors"
-                  aria-label="YouTube"
-                >
-                  <Youtube className="w-5 h-5 text-foreground" />
-                </a>
-              </div>
-
+            {/* Language Selector & Mobile Menu */}
+            <div className="flex items-center gap-2">
               <div className="flex gap-1 bg-muted rounded-lg p-1">
                 {(['mr', 'en', 'hi'] as Language[]).map((lang) => (
                   <Button
@@ -179,6 +148,37 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           )}
         </div>
       </header>
+
+      {/* Social Media Sidebar - Fixed on Right */}
+      <div className="hidden lg:flex fixed right-4 top-1/2 -translate-y-1/2 flex-col gap-3 z-40">
+        <a 
+          href="https://instagram.com/nimgaon_cha_raja" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-lg hover:shadow-xl"
+          aria-label="Instagram"
+        >
+          <Instagram className="w-6 h-6" />
+        </a>
+        <a 
+          href="#" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-lg hover:shadow-xl"
+          aria-label="Facebook"
+        >
+          <Facebook className="w-6 h-6" />
+        </a>
+        <a 
+          href="#" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-lg hover:shadow-xl"
+          aria-label="YouTube"
+        >
+          <Youtube className="w-6 h-6" />
+        </a>
+      </div>
 
       {/* Main Content */}
       <main>{children}</main>
