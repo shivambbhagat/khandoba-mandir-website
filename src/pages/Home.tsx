@@ -38,7 +38,7 @@ const content = {
   },
   en: {
     hero: {
-      title: 'Welcome to Shri Khandoba Temple',
+      title: 'Shri Khandoba Devsthan Nimgaon',
       subtitle: 'Sacred Pilgrimage Site at Nimgaon-Davadi',
       description: 'This holy shrine blessed by Mallari Martand, Malay Manik, King of Jejuri Shri Khandoba is the center of devotion for millions of devotees.',
       cta: 'Plan Your Visit'
@@ -68,7 +68,7 @@ const content = {
   },
   hi: {
     hero: {
-      title: 'श्री खंडोबा मंदिर में स्वागत है',
+      title: 'श्री खंडोबा देवस्थान निमगाव',
       subtitle: 'निमगांव-दावडी का पवित्र तीर्थस्थल',
       description: 'मल्लारी मार्तंड, मलय माणिक, जेजुरी के राजा श्री खंडोबा के आशीर्वाद से भरा यह पवित्र धाम भक्तों की श्रद्धा का केंद्र है।',
       cta: 'दर्शन की योजना बनाएं'
