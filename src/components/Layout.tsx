@@ -83,7 +83,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             <Link to="/" className="flex items-center gap-3">
               <img 
                 src={khandobaLogo} 
-                alt="Shri Khandoba" 
+                alt="Shri Khandoba Devsthan Nimgaon Dawadi" 
                 className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-primary"
               />
               <span className="text-sm text-muted-foreground">{t.location}</span>
