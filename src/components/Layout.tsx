@@ -186,9 +186,18 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       {/* Footer */}
       <footer className="bg-card border-t border-border mt-20">
         <div className="container mx-auto px-4 py-8">
-          <div className="text-center text-sm text-muted-foreground">
-            <p className="mb-2">© 2025 {t.temple}, {t.location}</p>
-            <p>जय मल्हार | Jai Malhar</p>
+          <div className="text-center space-y-4">
+            <div className="text-sm">
+              <p className="font-semibold text-foreground mb-1">Contact: Shri Babasaheb Bhagat</p>
+              <p className="text-muted-foreground">(Khandoba Pujari)</p>
+              <a href="tel:9922058279" className="text-primary hover:underline font-medium">
+                9922058279
+              </a>
+            </div>
+            <div className="text-sm text-muted-foreground border-t border-border pt-4">
+              <p className="mb-2">© 2025 {t.temple}, {t.location}</p>
+              <p>जय मल्हार | Jai Malhar</p>
+            </div>
           </div>
         </div>
       </footer>

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Phone, Clock } from 'lucide-react';
+import khandobaDeity from '@/assets/khandoba-deity.jpeg';
 
 const content = {
   mr: {
@@ -122,6 +123,19 @@ const Home = () => {
               {t.hero.cta}
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* Deity Image Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="rounded-xl overflow-hidden shadow-2xl">
+            <img 
+              src={khandobaDeity} 
+              alt="Shri Khandoba Deity"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </section>
 
