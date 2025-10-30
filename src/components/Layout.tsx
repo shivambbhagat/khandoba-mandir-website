@@ -72,7 +72,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-card border-b border-border shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+          {/* Temple Name - Top Row */}
+          <div className="flex items-center justify-center py-2 border-b border-border/50">
+            <h1 className="text-lg md:text-xl font-bold text-foreground">{t.temple}</h1>
+          </div>
+          
+          {/* Logo and Navigation - Bottom Row */}
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
               <img 
@@ -80,10 +86,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 alt="Shri Khandoba" 
                 className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-primary"
               />
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-foreground">{t.temple}</span>
-                <span className="text-sm text-muted-foreground">{t.location}</span>
-              </div>
+              <span className="text-sm text-muted-foreground">{t.location}</span>
             </Link>
 
             {/* Desktop Navigation */}
