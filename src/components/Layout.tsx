@@ -11,7 +11,7 @@ const translations = {
     history: 'इतिहास आणि महत्त्व',
     visit: 'दर्शन योजना',
     contact: 'संपर्क आणि दान',
-    jagaranGondal: 'जागरण गोंदल',
+    jagaranGondal: 'जागरण गोंधळ',
     abhishek: 'अभिषेक',
     gallery: 'फोटो गॅलरी',
     temple: 'श्री खंडोबा मंदिर',
