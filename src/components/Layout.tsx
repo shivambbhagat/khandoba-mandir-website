@@ -14,6 +14,7 @@ const translations = {
     jagaranGondal: 'जागरण गोंधळ',
     abhishek: 'अभिषेक',
     gallery: 'फोटो गॅलरी',
+    utsav: 'उत्सव',
     temple: 'श्री खंडोबा मंदिर',
     location: 'निमगाव-दावडी'
   },
@@ -25,6 +26,7 @@ const translations = {
     jagaranGondal: 'Jagaran Gondal',
     abhishek: 'Abhishek',
     gallery: 'Photo Gallery',
+    utsav: 'Festivals',
     temple: 'Shri Khandoba Temple',
     location: 'Nimgaon-Davadi'
   },
@@ -36,6 +38,7 @@ const translations = {
     jagaranGondal: 'जागरण गोंदल',
     abhishek: 'अभिषेक',
     gallery: 'फोटो गैलरी',
+    utsav: 'उत्सव',
     temple: 'श्री खंडोबा मंदिर',
     location: 'निमगांव-दावडी'
   }
@@ -60,7 +63,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     { path: '/contact', label: t.contact },
     { path: '/jagaran-gondal', label: t.jagaranGondal },
     { path: '/abhishek', label: t.abhishek },
-    { path: '/gallery', label: t.gallery }
+    { path: '/gallery', label: t.gallery },
+    { path: '/utsav', label: t.utsav }
   ];
 
   return (
