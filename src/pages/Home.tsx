@@ -126,35 +126,38 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Deity Image Section */}
+      {/* Deity Image and Features Section */}
       <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
-          <div className="rounded-xl overflow-hidden shadow-2xl">
-            <img 
-              src={khandobaDeity} 
-              alt="Shri Khandoba Deity"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8">
-            {t.features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </Card>
-              );
-            })}
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Deity Image */}
+            <div className="rounded-xl overflow-hidden shadow-2xl">
+              <img 
+                src={khandobaDeity} 
+                alt="Shri Khandoba Deity"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            
+            {/* Features Grid */}
+            <div className="grid gap-8">
+              {t.features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-7 h-7 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
+                        <p className="text-muted-foreground">{feature.description}</p>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

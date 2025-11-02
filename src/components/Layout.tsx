@@ -73,25 +73,27 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <header className="sticky top-0 z-50 bg-card border-b border-border shadow-sm">
         <div className="container mx-auto px-4">
           {/* Temple Name - Top Row */}
-          <div className="flex items-center justify-center gap-3 py-3 border-b border-border/50">
+          <div className="flex items-center justify-center gap-3 py-4 border-b border-border/50 bg-gradient-to-r from-primary/20 via-primary/30 to-primary/20">
             <img 
               src={khandobaLogo} 
               alt="Shri Khandoba" 
               className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-md border-2 border-primary"
             />
-            <h1 className="text-lg md:text-2xl font-bold text-foreground">{t.temple}</h1>
+            <div className="text-center">
+              <h1 className="text-lg md:text-2xl font-bold text-foreground">{t.temple}</h1>
+              <p className="text-xs md:text-sm text-muted-foreground">{t.location}</p>
+            </div>
           </div>
           
-          {/* Logo and Navigation - Bottom Row */}
+          {/* Navigation Row */}
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
               <img 
                 src={khandobaLogo} 
                 alt="Shri Khandoba Devsthan Nimgaon Dawadi" 
-                className="w-12 h-12 rounded-full object-cover shadow-lg border-2 border-primary"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-lg border-2 border-primary"
               />
-              <span className="text-sm text-muted-foreground">{t.location}</span>
             </Link>
 
             {/* Desktop Navigation */}
