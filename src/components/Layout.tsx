@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Menu, X, Instagram, Facebook, Youtube, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import khandobaLogo from '@/assets/khandoba-logo.jpeg';
 
@@ -73,8 +73,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <header className="sticky top-0 z-50 bg-card border-b border-border shadow-sm">
         <div className="container mx-auto px-4">
           {/* Temple Name - Top Row */}
-          <div className="flex items-center justify-center py-2 border-b border-border/50">
-            <h1 className="text-lg md:text-xl font-bold text-foreground">{t.temple}</h1>
+          <div className="flex items-center justify-center gap-3 py-3 border-b border-border/50">
+            <img 
+              src={khandobaLogo} 
+              alt="Shri Khandoba" 
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-md border-2 border-primary"
+            />
+            <h1 className="text-lg md:text-2xl font-bold text-foreground">{t.temple}</h1>
           </div>
           
           {/* Logo and Navigation - Bottom Row */}
@@ -108,14 +113,14 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
             {/* Language Selector & Mobile Menu */}
             <div className="flex items-center gap-2">
-              <div className="flex gap-1 bg-muted rounded-lg p-1">
+              <div className="flex gap-0.5 bg-muted rounded-md p-0.5">
                 {(['mr', 'en', 'hi'] as Language[]).map((lang) => (
                   <Button
                     key={lang}
                     variant={language === lang ? 'default' : 'ghost'}
                     size="sm"
                     onClick={() => setLanguage(lang)}
-                    className="text-xs px-3"
+                    className="text-xs px-2 py-1 h-7 min-w-[45px]"
                   >
                     {languageNames[lang]}
                   </Button>
@@ -192,18 +197,39 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
       {/* Footer */}
       <footer className="bg-card border-t border-border mt-20">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center space-y-4">
+        <div className="container mx-auto px-4 py-10">
+          <div className="text-center space-y-6">
+            {/* Contact Section */}
             <div className="text-sm">
-              <p className="font-semibold text-foreground mb-1">Contact: Shri Babasaheb Bhagat</p>
-              <p className="text-muted-foreground">(Khandoba Pujari)</p>
-              <a href="tel:9922058279" className="text-primary hover:underline font-medium">
+              <p className="font-semibold text-foreground mb-1 text-base">Contact: Shri Babasaheb Bhagat</p>
+              <p className="text-muted-foreground mb-2">(Khandoba Pujari)</p>
+              <a href="tel:9922058279" className="text-primary hover:underline font-medium text-lg">
                 9922058279
               </a>
             </div>
-            <div className="text-sm text-muted-foreground border-t border-border pt-4">
+            
+            {/* Address Section */}
+            <div className="text-sm border-t border-border pt-6">
+              <p className="font-semibold text-foreground mb-2">Address:</p>
+              <p className="text-muted-foreground mb-3">
+                Khandoba Temple, Deulwada, Nimgaon<br />
+                Rajgurunagar, Khed, Pune 410505
+              </p>
+              <a 
+                href="https://maps.app.goo.gl/Vt9NJbO686tBrIbDR" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+              >
+                <MapPin className="w-4 h-4" />
+                View on Google Maps
+              </a>
+            </div>
+            
+            {/* Copyright */}
+            <div className="text-sm text-muted-foreground border-t border-border pt-6">
               <p className="mb-2">© 2025 {t.temple}, {t.location}</p>
-              <p>जय मल्हार | Jai Malhar</p>
+              <p className="font-semibold">जय मल्हार | Jai Malhar</p>
             </div>
           </div>
         </div>

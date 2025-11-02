@@ -167,7 +167,7 @@ const Contact = () => {
 
         {/* Contact Info */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="p-8 bg-gradient-to-br from-primary/10 to-secondary/10">
+          <Card className="p-8 md:p-10 bg-gradient-to-br from-primary/10 to-secondary/10">
             <h2 className="text-2xl font-bold mb-6 text-foreground">{t.contact.title}</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -192,7 +192,7 @@ const Contact = () => {
             </div>
           </Card>
 
-          <Card className="p-8">
+          <Card className="p-8 md:p-10">
             <h2 className="text-2xl font-bold mb-4 text-foreground">{t.message.title}</h2>
             <p className="text-muted-foreground mb-4">{t.message.description}</p>
             <p className="text-sm text-muted-foreground bg-muted/50 p-4 rounded-lg">
@@ -202,7 +202,7 @@ const Contact = () => {
         </div>
 
         {/* Donation Section */}
-        <Card className="p-8 mb-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
+        <Card className="p-8 md:p-10 mb-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
           <div className="flex items-center gap-3 mb-4">
             <Heart className="w-8 h-8 text-accent" />
             <h2 className="text-3xl font-bold text-foreground">{t.donation.title}</h2>
@@ -237,7 +237,7 @@ const Contact = () => {
         </Card>
 
         {/* Seva Opportunities */}
-        <Card className="p-8">
+        <Card className="p-8 md:p-10">
           <div className="flex items-center gap-3 mb-4">
             <Users className="w-8 h-8 text-primary" />
             <h2 className="text-2xl font-bold text-foreground">{t.seva.title}</h2>

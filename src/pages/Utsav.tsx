@@ -152,7 +152,7 @@ const Utsav = () => {
             {t.festivals.map((festival, index) => {
               const Icon = festivalIcons[index];
               return (
-                <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
+                <Card key={index} className="p-8 md:p-10 hover:shadow-lg transition-shadow">
                   <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-shrink-0">
                       <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">

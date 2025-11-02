@@ -223,7 +223,7 @@ const Visit = () => {
         </div>
 
         {/* Timings */}
-        <Card className="p-6 md:p-8 mb-8 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <Card className="p-8 md:p-10 mb-8 bg-gradient-to-br from-primary/10 to-secondary/10">
           <div className="flex items-start gap-4 mb-4">
             <Clock className="w-8 h-8 text-primary flex-shrink-0" />
             <div>
@@ -238,7 +238,7 @@ const Visit = () => {
         </Card>
 
         {/* Location */}
-        <Card className="p-6 md:p-8 mb-8">
+        <Card className="p-8 md:p-10 mb-8">
           <div className="flex items-start gap-4 mb-4">
             <MapPin className="w-8 h-8 text-primary flex-shrink-0" />
             <div className="flex-1">
@@ -261,7 +261,7 @@ const Visit = () => {
         </Card>
 
         {/* Festivals */}
-        <Card className="p-6 md:p-8 mb-8">
+        <Card className="p-8 md:p-10 mb-8">
           <div className="flex items-start gap-4 mb-6">
             <Calendar className="w-8 h-8 text-primary flex-shrink-0" />
             <h2 className="text-2xl font-bold text-foreground">{t.festivals.title}</h2>
@@ -280,7 +280,7 @@ const Visit = () => {
         {/* Two Column Layout */}
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* Facilities */}
-          <Card className="p-6 md:p-8">
+          <Card className="p-8 md:p-10">
             <h2 className="text-2xl font-bold mb-4 text-foreground">{t.facilities.title}</h2>
             <ul className="space-y-3">
               {t.facilities.items.map((item, index) => (
@@ -293,7 +293,7 @@ const Visit = () => {
           </Card>
 
           {/* Offerings */}
-          <Card className="p-6 md:p-8">
+          <Card className="p-8 md:p-10">
             <div className="flex items-start gap-3 mb-4">
               <Utensils className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <h2 className="text-2xl font-bold text-foreground">{t.offerings.title}</h2>
@@ -310,7 +310,7 @@ const Visit = () => {
         </div>
 
         {/* Tips */}
-        <Card className="p-6 md:p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
+        <Card className="p-8 md:p-10 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
           <h2 className="text-2xl font-bold mb-4 text-center text-foreground">{t.tips.title}</h2>
           <ul className="space-y-3 max-w-2xl mx-auto">
             {t.tips.items.map((item, index) => (

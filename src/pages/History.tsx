@@ -125,7 +125,7 @@ const History = () => {
         {/* Main Sections */}
         <div className="space-y-8 mb-12">
           {t.sections.map((section, index) => (
-            <Card key={index} className="p-6 md:p-8">
+            <Card key={index} className="p-8 md:p-10">
               <h2 className="text-2xl font-bold mb-4 text-foreground">{section.title}</h2>
               <p className="text-muted-foreground leading-relaxed text-lg">{section.content}</p>
             </Card>
@@ -133,7 +133,7 @@ const History = () => {
         </div>
 
         {/* Beliefs Section */}
-        <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
+        <Card className="p-8 md:p-10 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
           <h2 className="text-2xl font-bold mb-6 text-center text-foreground">{t.beliefs.title}</h2>
           <ul className="space-y-4">
             {t.beliefs.items.map((item, index) => (
