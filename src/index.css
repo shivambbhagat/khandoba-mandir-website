@@ -101,11 +101,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    cursor: url('/src/assets/trishul-cursor.png'), auto;
+    cursor: url('/trishul-cursor.png'), auto;
   }
   
   /* Custom cursor for interactive elements */
   a, button, input, select, textarea {
-    cursor: url('/src/assets/trishul-cursor.png'), pointer;
+    cursor: url('/trishul-cursor.png'), pointer;
   }
 }
