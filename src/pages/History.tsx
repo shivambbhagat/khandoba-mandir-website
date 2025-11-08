@@ -43,7 +43,7 @@ const content = {
     sections: [
       {
         title: 'Divine Origin',
-        content: 'Shri Khandoba is an incarnation of Lord Shiva. To destroy two demons named Malla and Mani, Lord Shiva took avatar as Martand. Malhari means one who killed Malla and Martand means radiant as the sun. Shri Khandoba represents courage, justice and devotion.'
+        content: 'Shri Khandoba is an incarnation of Lord Shiva. To destroy two demons named Malla and Mani, Lord Shiva took avatar as Martand. Malhari means one who killed Malla and Martand means radiant as the sun. Shri Khandoba represents courage, justice and devotion. Khandoba or Khanderai is a popular Hindu deity mainly in the states of Maharashtra, Karnataka, Andhra Pradesh. This deity is the family deity of many people in Maharashtra. Mainly considered as the family deity of Maratha, Ramoshi (Naik), Dhangar community. Khandoba's family includes Mhalsa, Banai's wife; Hegde ha Pradhan (he is the brother of Banai); Includes dog and vehicle horse. The idols of Khandoba are seated, standing and on horseback and have a damru, trishul, khanda and panpatra in their hands, quadrilateral, and a bhandara on their forehead. After slaying Mani and Malla Asuras, Sri Martanda Bhairava established his capital on the hill of Jayadri and settled permanently to remove the evils of man in the Kali Yuga.'
       },
       {
         title: 'King of Jejuri',
@@ -78,9 +78,9 @@ const content = {
     sections: [
       {
         title: 'देव की उत्पत्ति',
-        content: 'श्री खंडोबा भगवान शिव का अवतार हैं। मल्ल और मणि नामक दो असुरों का वध करने के लिए भगवान शिव ने मार्तंड रूप में अवतार लिया। मल्हारी का अर्थ है मल्ल का वध करने वाला और मार्तंड का अर्थ है सूर्य के समान तेजस्वी। श्री खंडोबा शौर्य, न्याय और भक्ति के प्रतीक हैं।'
+        content: 'श्री खंडोबा भगवान शिव का अवतार हैं। मल्ल और मणि नामक दो असुरों का वध करने के लिए भगवान शिव ने मार्तंड रूप में अवतार लिया। मल्हारी का अर्थ है मल्ल का वध करने वाला और मार्तंड का अर्थ है सूर्य के समान तेजस्वी। श्री खंडोबा शौर्य, न्याय और भक्ति के प्रतीक हैं।खंडोबा या खंडेराई मुख्य रूप से महाराष्ट्र, कर्नाटक, आंध्र प्रदेश राज्यों में एक लोकप्रिय हिंदू देवता हैं। यह देवता महाराष्ट्र के कई लोगों के कुल देवता हैं। मुख्य रूप से मराठा, रामोशी (नाइक), धनगर समुदाय के कुल देवता माने जाते हैं। खंडोबा के परिवार में बनाई की पत्नी म्हालसा शामिल हैं; हेगड़े हा प्रधान (वह बनई के भाई हैं); कुत्ता और वाहन घोड़ा शामिल है. खंडोबा की मूर्तियाँ बैठी हुई, खड़ी हुई और घोड़े पर सवार हैं और उनके हाथों में डमरू, त्रिशूल, खांडा और पानपत्र, चतुर्भुज और माथे पर भंडारा है। मणि और मल्ल असुरों का वध करने के बाद, श्री मार्तंड भैरव ने कलियुग में मनुष्य की बुराइयों को दूर करने के लिए जयद्रि की पहाड़ी पर अपनी राजधानी स्थापित की और स्थायी रूप से बस गए।'
       },
-      {
+      { 
         title: 'जेजुरी के राजा',
         content: 'जेजुरी में श्री खंडोबा का मुख्य स्थान है, लेकिन महाराष्ट्र के कई गांवों में श्री खंडोबा की पूजा की जाती है। निमगांव-दावडी का मंदिर अत्यंत प्राचीन और प्रसिद्ध है। यहां हर साल हजारों भक्त दर्शन के लिए आते हैं।'
       },
