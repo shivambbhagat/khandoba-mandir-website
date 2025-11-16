@@ -184,7 +184,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           <Facebook className="w-6 h-6" />
         </a>
         <a 
-          href="#" 
+          href="https://www.youtube.com/@NimgaonKhandoba" 
           target="_blank" 
           rel="noopener noreferrer"
           className="p-3 bg-card border border-border rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-lg hover:shadow-xl"
