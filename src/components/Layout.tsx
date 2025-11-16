@@ -218,7 +218,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 Rajgurunagar, Khed, Pune 410505
               </p>
               <a 
-                href="https://maps.app.goo.gl/Vt9NJbO686tBrIbDR" 
+                href="https://share.google/pyGTj5JORfdA1TkLd" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
