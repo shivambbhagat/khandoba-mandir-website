@@ -113,8 +113,39 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               ))}
             </nav>
 
-            {/* Language Selector & Mobile Menu */}
-            <div className="flex items-center gap-2">
+            {/* Language Selector & Social Media & Mobile Menu */}
+            <div className="flex items-center gap-3">
+              {/* Social Media Icons */}
+              <div className="hidden sm:flex items-center gap-2">
+                <a 
+                  href="https://instagram.com/nimgaon_cha_raja" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.youtube.com/@NimgaonKhandoba" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-5 h-5" />
+                </a>
+              </div>
+
               <div className="flex gap-0.5 bg-muted rounded-md p-0.5">
                 {(['mr', 'en', 'hi'] as Language[]).map((lang) => (
                   <Button
