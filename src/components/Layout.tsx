@@ -210,6 +210,40 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               </a>
             </div>
             
+            {/* Social Media Section */}
+            <div className="text-sm border-t border-border pt-6">
+              <p className="font-semibold text-foreground mb-4">Follow Us:</p>
+              <div className="flex justify-center gap-4">
+                <a 
+                  href="https://instagram.com/nimgaon_cha_raja" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-muted rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-muted rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://www.youtube.com/@NimgaonKhandoba" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-muted rounded-full hover:bg-primary hover:text-primary-foreground transition-all"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+
             {/* Address Section */}
             <div className="text-sm border-t border-border pt-6">
               <p className="font-semibold text-foreground mb-2">Address:</p>
