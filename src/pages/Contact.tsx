@@ -186,7 +186,16 @@ const Contact = () => {
                 <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-foreground mb-1">{t.contact.address}</p>
-                  <p className="text-muted-foreground">{t.contact.addressLine}</p>
+                  <p className="text-muted-foreground mb-2">{t.contact.addressLine}</p>
+                  <a 
+                    href="https://share.google/pyGTj5JORfdA1TkLd" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-sm"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    View on Google Maps
+                  </a>
                 </div>
               </div>
             </div>
