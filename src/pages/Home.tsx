@@ -7,7 +7,7 @@ import khandobaDeity from '@/assets/khandoba-deity.jpeg';
 
 const content = {
   mr: {
-    marquee: 'जय मल्हार! श्री खंडोबा मंदिर निमगाव-दावडी येथे आपले स्वागत आहे • दररोज सकाळी ५:०० ते रात्री ९:०० पर्यंत मंदिर उघडे असते • चांपा षष्ठी, दत्त जयंती आणि भद्रपद वाड्या सहावीला विशेष उत्सव •',
+    marquee: 'जय मल्हार! श्री खंडोबा मंदिर निमगाव-दावडी येथे आपले स्वागत आहे • दररोज सकाळी ५:०० ते रात्री ९:०० पर्यंत मंदिर उघडे असते • ',
     hero: {
       title: 'श्री खंडोबा देवस्थान निमगाव',
       subtitle: 'निमगाव-दावडी येथील पवित्र तीर्थक्षेत्र',
@@ -38,7 +38,7 @@ const content = {
     quickContact: 'त्वरित संपर्क'
   },
   en: {
-    marquee: 'Jai Malhar! Welcome to Shri Khandoba Temple Nimgaon-Davadi • Temple open daily from 5:00 AM to 9:00 PM • Special celebrations on Champa Shashthi, Datta Jayanti and Bhadrapad Vadya Shashthi •',
+    marquee: 'Jai Malhar! Welcome to Shri Khandoba Temple Nimgaon-Davadi • Temple open daily from 5:00 AM to 9:00 PM • ',
     hero: {
       title: 'Shri Khandoba Devsthan Nimgaon',
       subtitle: 'Sacred Pilgrimage Site at Nimgaon-Davadi',
@@ -69,7 +69,7 @@ const content = {
     quickContact: 'Quick Contact'
   },
   hi: {
-    marquee: 'जय मल्हार! श्री खंडोबा मंदिर निमगांव-दावडी में आपका स्वागत है • मंदिर प्रतिदिन सुबह ५:०० से रात ९:०० तक खुला रहता है • चांपा षष्ठी, दत्त जयंती और भाद्रपद वाड्या षष्ठी पर विशेष उत्सव •',
+    marquee: 'जय मल्हार! श्री खंडोबा मंदिर निमगांव-दावडी में आपका स्वागत है • मंदिर प्रतिदिन सुबह ५:०० से रात ९:०० तक खुला रहता है • ',
     hero: {
       title: 'श्री खंडोबा देवस्थान निमगाव',
       subtitle: 'निमगांव-दावडी का पवित्र तीर्थस्थल',
