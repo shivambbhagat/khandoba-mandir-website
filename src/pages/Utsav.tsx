@@ -1,6 +1,6 @@
+import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Card } from '@/components/ui/card';
-import { Calendar, Sparkles, Sun, Moon, Star } from 'lucide-react';
+import { Sparkles, Sun, Moon, Star, Calendar } from 'lucide-react';
 
 const content = {
   mr: {
@@ -137,65 +137,111 @@ const Utsav = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-primary/10 to-background">
-        <div className="container mx-auto max-w-4xl text-center">
-          <Calendar className="w-16 h-16 mx-auto mb-6 text-primary" />
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">{t.title}</h1>
-          <p className="text-lg text-muted-foreground">{t.subtitle}</p>
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"
+          style={{
+            backgroundImage: 'url(/src/assets/khandoba-deity.jpeg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundBlendMode: 'overlay'
+          }}
+        />
+        <div className="relative container mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+            {t.title}
+          </h1>
+          <div className="flex justify-center my-6">
+            <div className="h-1 w-32 bg-white/80 rounded-full" />
+          </div>
         </div>
       </section>
 
       {/* Festivals Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="space-y-8">
-            {t.festivals.map((festival, index) => {
-              const Icon = festivalIcons[index];
-              return (
-                <Card key={index} className="p-8 md:p-10 hover:shadow-lg transition-shadow">
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Icon className="w-8 h-8 text-primary" />
-                      </div>
-                    </div>
-                    <div className="flex-1 space-y-4">
-                      <div>
-                        <h2 className="text-2xl font-bold text-foreground mb-2">{festival.name}</h2>
-                        <p className="text-primary font-medium">{festival.date}</p>
+        <div className="container mx-auto max-w-7xl">
+          <div className="space-y-20">
+            {t.festivals.map((festival, index) => (
+              <div key={index} className="scroll-mt-20">
+                {/* Festival Title */}
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                    {festival.name}
+                  </h2>
+                  <div className="flex justify-center">
+                    <div className="h-0.5 w-24 bg-gradient-to-r from-transparent via-primary to-transparent" />
+                  </div>
+                </div>
+
+                {/* Two Column Layout */}
+                <div className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${
+                  index % 2 === 1 ? 'md:flex-row-reverse' : ''
+                }`}>
+                  {/* Content Column */}
+                  <div className={`space-y-6 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                    <div className="space-y-4">
+                      <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+                        <p className="text-primary font-semibold">{festival.date}</p>
                       </div>
                       
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-lg text-muted-foreground leading-relaxed">
                         {festival.description}
                       </p>
                       
-                      <div className="bg-muted/50 p-4 rounded-lg">
-                        <h3 className="font-semibold text-foreground mb-2">
+                      <div className="border-l-4 border-primary pl-6 py-2">
+                        <h3 className="font-bold text-foreground mb-2 text-lg">
                           {language === 'mr' ? 'महत्त्व:' : language === 'hi' ? 'महत्व:' : 'Significance:'}
                         </h3>
-                        <p className="text-muted-foreground">{festival.significance}</p>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {festival.significance}
+                        </p>
                       </div>
                       
                       <div>
-                        <h3 className="font-semibold text-foreground mb-3">
+                        <h3 className="font-bold text-foreground mb-4 text-lg">
                           {language === 'mr' ? 'कार्यक्रम:' : language === 'hi' ? 'कार्यक्रम:' : 'Activities:'}
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="grid grid-cols-2 gap-3">
                           {festival.activities.map((activity, idx) => (
-                            <span
+                            <div
                               key={idx}
-                              className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                              className="flex items-center gap-2 text-muted-foreground"
                             >
-                              {activity}
-                            </span>
+                              <div className="w-2 h-2 rounded-full bg-primary" />
+                              <span className="text-sm font-medium">{activity}</span>
+                            </div>
                           ))}
                         </div>
                       </div>
                     </div>
                   </div>
-                </Card>
-              );
-            })}
+
+                  {/* Image Column */}
+                  <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                      <img 
+                        src="/src/assets/khandoba-deity.jpeg"
+                        alt={festival.name}
+                        className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-6 left-6 right-6">
+                        <div className="flex items-center gap-2">
+                          {festivalIcons[index] && 
+                            React.createElement(festivalIcons[index], {
+                              className: "w-8 h-8 text-white drop-shadow-lg"
+                            })
+                          }
+                          <h3 className="text-2xl font-bold text-white drop-shadow-lg">
+                            {festival.name}
+                          </h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
