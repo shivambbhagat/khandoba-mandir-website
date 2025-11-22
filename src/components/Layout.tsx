@@ -297,7 +297,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                   </p>
                 </div>
                 <a 
-                  href="https://share.google/pyGTj5JORfdA1TkLd" 
+                  href="https://maps.app.goo.gl/qp2P9AB6gwkKhVUDA" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
@@ -315,7 +315,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               </h3>
               <div className="w-full h-48 rounded-lg overflow-hidden shadow-md border border-border">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.8234567890123!2d73.9167!3d18.9667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU4JzAwLjEiTiA3M8KwNTUnMDAuMSJF!5e0!3m2!1sen!2sin!4v1234567890123"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.0442803537727!2d73.91392407516857!3d18.959847582213854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e96166666667%3A0x5e6f8e3f5f8e6f8e!2sShri%20Khandoba%20Temple%2C%20Nimgaon!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
