@@ -229,41 +229,146 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border mt-20">
-        <div className="container mx-auto px-4 py-10">
-          <div className="text-center space-y-6">
-            {/* Contact Section */}
-            <div className="text-sm">
-              <p className="font-semibold text-foreground mb-1 text-base">Contact: Shri Babasaheb Bhagat</p>
-              <p className="text-muted-foreground mb-2">(Khandoba Pujari)</p>
-              <a href="tel:9922058279" className="text-primary hover:underline font-medium text-lg">
-                9922058279
-              </a>
+      <footer className="bg-gradient-to-b from-card to-muted/30 border-t border-border mt-20">
+        <div className="container mx-auto px-4 py-12">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            {/* Temple Info Column */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <img 
+                  src={khandobaLogo} 
+                  alt="Shri Khandoba" 
+                  className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-primary"
+                />
+                <div>
+                  <h3 className="font-bold text-foreground text-lg">{t.temple}</h3>
+                  <p className="text-sm text-muted-foreground">{t.location}</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {language === 'mr' 
+                  ? 'श्री खंडोबा मंदिर, निमगाव-दावडी येथे आपले स्वागत आहे। येथे दर्शन घेऊन आशीर्वाद घ्या.'
+                  : language === 'hi'
+                  ? 'श्री खंडोबा मंदिर, निमगांव-दावडी में आपका स्वागत है। यहां दर्शन करें और आशीर्वाद प्राप्त करें।'
+                  : 'Welcome to Shri Khandoba Temple, Nimgaon-Davadi. Visit us for divine blessings.'}
+              </p>
             </div>
 
-            {/* Address Section */}
-            <div className="text-sm border-t border-border pt-6">
-              <p className="font-semibold text-foreground mb-2">Address:</p>
-              <p className="text-muted-foreground mb-3">
-                Khandoba Temple, Deulwada, Nimgaon<br />
-                Rajgurunagar, Khed, Pune 410505
-              </p>
-              <a 
-                href="https://share.google/pyGTj5JORfdA1TkLd" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-              >
-                <MapPin className="w-4 h-4" />
-                View on Google Maps
-              </a>
+            {/* Quick Links Column */}
+            <div className="space-y-4">
+              <h3 className="font-bold text-foreground text-lg mb-4">
+                {language === 'mr' ? 'द्रुत दुवे' : language === 'hi' ? 'त्वरित लिंक' : 'Quick Links'}
+              </h3>
+              <nav className="flex flex-col space-y-2">
+                {navLinks.slice(0, 6).map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
             </div>
-            
-            {/* Copyright */}
-            <div className="text-sm text-muted-foreground border-t border-border pt-6">
-              <p className="mb-2">© 2025 {t.temple}, {t.location}</p>
-              <p className="font-semibold">जय मल्हार | Jai Malhar</p>
+
+            {/* Contact Info Column */}
+            <div className="space-y-4">
+              <h3 className="font-bold text-foreground text-lg mb-4">
+                {language === 'mr' ? 'संपर्क माहिती' : language === 'hi' ? 'संपर्क जानकारी' : 'Contact Info'}
+              </h3>
+              <div className="space-y-3 text-sm">
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Shri Babasaheb Bhagat</p>
+                  <p className="text-muted-foreground mb-1">(Khandoba Pujari)</p>
+                  <a href="tel:9922058279" className="text-primary hover:underline font-medium">
+                    📞 9922058279
+                  </a>
+                </div>
+                <div className="pt-2">
+                  <p className="font-semibold text-foreground mb-1">
+                    {language === 'mr' ? 'पत्ता:' : language === 'hi' ? 'पता:' : 'Address:'}
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Khandoba Temple, Deulwada<br />
+                    Nimgaon, Rajgurunagar<br />
+                    Khed, Pune 410505
+                  </p>
+                </div>
+                <a 
+                  href="https://share.google/pyGTj5JORfdA1TkLd" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                >
+                  <MapPin className="w-4 h-4" />
+                  {language === 'mr' ? 'Google Maps वर पहा' : language === 'hi' ? 'Google Maps पर देखें' : 'View on Google Maps'}
+                </a>
+              </div>
             </div>
+
+            {/* Map Column */}
+            <div className="space-y-4">
+              <h3 className="font-bold text-foreground text-lg mb-4">
+                {language === 'mr' ? 'आमचे स्थान' : language === 'hi' ? 'हमारा स्थान' : 'Our Location'}
+              </h3>
+              <div className="w-full h-48 rounded-lg overflow-hidden shadow-md border border-border">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.8234567890123!2d73.9167!3d18.9667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU4JzAwLjEiTiA3M8KwNTUnMDAuMSJF!5e0!3m2!1sen!2sin!4v1234567890123"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Temple Location"
+                />
+              </div>
+              {/* Social Media Links */}
+              <div>
+                <p className="font-semibold text-foreground mb-3 text-sm">
+                  {language === 'mr' ? 'आमच्याशी जुडा:' : language === 'hi' ? 'हमसे जुड़ें:' : 'Connect With Us:'}
+                </p>
+                <div className="flex gap-3">
+                  <a 
+                    href="https://instagram.com/nimgaon_cha_raja" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2.5 bg-background rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="#" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2.5 bg-background rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://www.youtube.com/@NimgaonKhandoba" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2.5 bg-background rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
+                    aria-label="YouTube"
+                  >
+                    <Youtube className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-border pt-6 text-center space-y-2">
+            <p className="text-sm text-muted-foreground">
+              © 2025 {t.temple}, {t.location}. {language === 'mr' ? 'सर्व हक्क राखीव.' : language === 'hi' ? 'सर्वाधिकार सुरक्षित।' : 'All rights reserved.'}
+            </p>
+            <p className="font-bold text-primary text-lg">जय मल्हार | Jai Malhar</p>
           </div>
         </div>
       </footer>
