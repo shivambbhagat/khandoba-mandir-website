@@ -137,22 +137,13 @@ const Utsav = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"
-          style={{
-            backgroundImage: 'url(/src/assets/khandoba-deity.jpeg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundBlendMode: 'overlay'
-          }}
-        />
-        <div className="relative container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white drop-shadow-lg">
+      <section className="py-16 px-4 bg-gradient-to-b from-primary/10 to-background">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
             {t.title}
           </h1>
           <div className="flex justify-center my-6">
-            <div className="h-1 w-32 bg-white/80 rounded-full" />
+            <div className="h-1 w-32 bg-primary rounded-full" />
           </div>
         </div>
       </section>
