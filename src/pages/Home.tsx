@@ -117,24 +117,31 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-b from-background via-muted/30 to-background">
-        <div className="container mx-auto text-center max-w-4xl">
+      <section className="relative py-20 px-4 overflow-hidden">
+        {/* Video Background */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/temple-video.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        {/* Content */}
+        <div className="container mx-auto text-center max-w-4xl relative z-10">
           <div className="mb-6">
-            <div className="inline-block px-6 py-2 bg-primary/10 rounded-full text-primary font-semibold mb-4">
+            <div className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold mb-4">
               🙏 {t.hero.subtitle}
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
             {t.hero.title}
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            {t.hero.description}
-          </p>
-          <Link to="/visit">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all">
-              {t.hero.cta}
-            </Button>
-          </Link>
         </div>
       </section>
 
