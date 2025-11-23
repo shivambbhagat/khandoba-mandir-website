@@ -229,18 +229,25 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-b from-card to-muted/30 border-t border-border mt-20">
-        <div className="container mx-auto px-4 py-12">
+      <footer className="relative bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 dark:from-orange-950/20 dark:via-yellow-950/20 dark:to-red-950/20 border-t-4 border-primary mt-20 overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        
+        <div className="container mx-auto px-4 py-12 relative z-10">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Temple Info Column */}
-            <div className="space-y-4">
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-primary/20">
               <div className="flex items-center gap-3">
-                <img 
-                  src={khandobaLogo} 
-                  alt="Shri Khandoba" 
-                  className="w-12 h-12 rounded-full object-cover shadow-md border-2 border-primary"
-                />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-md" />
+                  <img 
+                    src={khandobaLogo} 
+                    alt="Shri Khandoba" 
+                    className="relative w-12 h-12 rounded-full object-cover shadow-md border-2 border-primary"
+                  />
+                </div>
                 <div>
                   <h3 className="font-bold text-foreground text-lg">{t.temple}</h3>
                   <p className="text-sm text-muted-foreground">{t.location}</p>
@@ -256,8 +263,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             {/* Quick Links Column */}
-            <div className="space-y-4">
-              <h3 className="font-bold text-foreground text-lg mb-4">
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-secondary/20">
+              <h3 className="font-bold text-foreground text-lg mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-primary to-secondary rounded-full" />
                 {language === 'mr' ? 'द्रुत दुवे' : language === 'hi' ? 'त्वरित लिंक' : 'Quick Links'}
               </h3>
               <nav className="flex flex-col space-y-2">
@@ -274,8 +282,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             {/* Contact Info Column */}
-            <div className="space-y-4">
-              <h3 className="font-bold text-foreground text-lg mb-4">
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-accent/20">
+              <h3 className="font-bold text-foreground text-lg mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-secondary to-accent rounded-full" />
                 {language === 'mr' ? 'संपर्क माहिती' : language === 'hi' ? 'संपर्क जानकारी' : 'Contact Info'}
               </h3>
               <div className="space-y-3 text-sm">
@@ -309,13 +318,14 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             {/* Map Column */}
-            <div className="space-y-4">
-              <h3 className="font-bold text-foreground text-lg mb-4">
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-primary/20">
+              <h3 className="font-bold text-foreground text-lg mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-accent to-primary rounded-full" />
                 {language === 'mr' ? 'आमचे स्थान' : language === 'hi' ? 'हमारा स्थान' : 'Our Location'}
               </h3>
-              <div className="w-full h-48 rounded-lg overflow-hidden shadow-md border border-border">
+              <div className="w-full h-48 rounded-xl overflow-hidden shadow-lg border-2 border-primary/30 ring-2 ring-primary/10">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.0442803537727!2d73.91392407516857!3d18.959847582213854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e96166666667%3A0x5e6f8e3f5f8e6f8e!2sShri%20Khandoba%20Temple%2C%20Nimgaon!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.725927941025!2d73.93031036119193!3d18.80650980119479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2cb86bf09a16b%3A0xd98a4fc13b2cbb01!2sKHANDOBA%20TEMPLE%20DAWADI%20NIMGAON!5e1!3m2!1sen!2sus!4v1763878712127!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -335,7 +345,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                     href="https://instagram.com/nimgaon_cha_raja" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-2.5 bg-background rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
+                    className="p-2.5 bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-full hover:scale-110 transition-all shadow-lg hover:shadow-xl"
                     aria-label="Instagram"
                   >
                     <Instagram className="w-5 h-5" />
@@ -344,7 +354,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                     href="#" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-2.5 bg-background rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
+                    className="p-2.5 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-full hover:scale-110 transition-all shadow-lg hover:shadow-xl"
                     aria-label="Facebook"
                   >
                     <Facebook className="w-5 h-5" />
@@ -353,7 +363,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                     href="https://www.youtube.com/@NimgaonKhandoba" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-2.5 bg-background rounded-full hover:bg-primary hover:text-primary-foreground transition-all shadow-sm"
+                    className="p-2.5 bg-gradient-to-br from-red-600 to-red-800 text-white rounded-full hover:scale-110 transition-all shadow-lg hover:shadow-xl"
                     aria-label="YouTube"
                   >
                     <Youtube className="w-5 h-5" />
@@ -364,11 +374,13 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-border pt-6 text-center space-y-2">
+          <div className="border-t-2 border-primary/20 pt-8 mt-8 text-center space-y-3 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 rounded-t-3xl px-6 py-6">
             <p className="text-sm text-muted-foreground">
               © 2025 {t.temple}, {t.location}. {language === 'mr' ? 'सर्व हक्क राखीव.' : language === 'hi' ? 'सर्वाधिकार सुरक्षित।' : 'All rights reserved.'}
             </p>
-            <p className="font-bold text-primary text-lg">जय मल्हार | Jai Malhar</p>
+            <p className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-600 to-red-600 text-xl">
+              जय मल्हार | Jai Malhar
+            </p>
           </div>
         </div>
       </footer>
