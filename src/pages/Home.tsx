@@ -117,7 +117,7 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative h-[70vh] overflow-hidden">
         {/* Video Background */}
         <video 
           autoPlay 
@@ -130,18 +130,15 @@ const Home = () => {
         </video>
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
         
-        {/* Content */}
-        <div className="container mx-auto text-center max-w-4xl relative z-10">
-          <div className="mb-6">
-            <div className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-semibold mb-4">
-              🙏 {t.hero.subtitle}
-            </div>
+        {/* Content at Bottom */}
+        <div className="absolute bottom-0 left-0 right-0 pb-12 px-4">
+          <div className="container mx-auto text-center max-w-4xl relative z-10">
+            <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">
+              {t.hero.title}
+            </h1>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
-            {t.hero.title}
-          </h1>
         </div>
       </section>
 
