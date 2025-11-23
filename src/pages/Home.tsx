@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Phone, Clock } from 'lucide-react';
-import khandobaDeity from '@/assets/khandoba-deity.jpeg';
+import khandobaDeity from '@/assets/khandoba-deity-new.jpg';
 
 const content = {
   mr: {
