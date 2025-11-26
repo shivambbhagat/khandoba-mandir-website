@@ -137,30 +137,33 @@ const Utsav = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-primary/10 to-background">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
+      <section className="py-16 px-4 bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/20 dark:via-yellow-950/20 dark:to-red-950/20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
             {t.title}
           </h1>
           <div className="flex justify-center my-6">
-            <div className="h-1 w-32 bg-primary rounded-full" />
+            <div className="h-2 w-32 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
           </div>
         </div>
       </section>
 
       {/* Festivals Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-red-50/30 dark:from-orange-950/5 dark:via-yellow-950/5 dark:to-red-950/5">
         <div className="container mx-auto max-w-7xl">
           <div className="space-y-20">
             {t.festivals.map((festival, index) => (
               <div key={index} className="scroll-mt-20">
                 {/* Festival Title */}
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 mb-4">
                     {festival.name}
                   </h2>
                   <div className="flex justify-center">
-                    <div className="h-0.5 w-24 bg-gradient-to-r from-transparent via-primary to-transparent" />
+                    <div className="h-1 w-24 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
                   </div>
                 </div>
 
@@ -170,17 +173,17 @@ const Utsav = () => {
                 }`}>
                   {/* Content Column */}
                   <div className={`space-y-6 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                    <div className="space-y-4">
-                      <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-                        <p className="text-primary font-semibold">{festival.date}</p>
+                    <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border-2 border-primary/20">
+                      <div className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full shadow-md">
+                        <p className="font-semibold">{festival.date}</p>
                       </div>
                       
                       <p className="text-lg text-muted-foreground leading-relaxed">
                         {festival.description}
                       </p>
                       
-                      <div className="border-l-4 border-primary pl-6 py-2">
-                        <h3 className="font-bold text-foreground mb-2 text-lg">
+                      <div className="border-l-4 border-gradient-to-b from-primary to-secondary pl-6 py-2 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-r-lg">
+                        <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mb-2 text-lg">
                           {language === 'mr' ? 'महत्त्व:' : language === 'hi' ? 'महत्व:' : 'Significance:'}
                         </h3>
                         <p className="text-muted-foreground leading-relaxed">
@@ -209,15 +212,15 @@ const Utsav = () => {
 
                   {/* Image Column */}
                   <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl group ring-4 ring-primary/20 hover:ring-primary/40 transition-all">
                       <img 
                         src="/src/assets/khandoba-deity.jpeg"
                         alt={festival.name}
                         className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                       <div className="absolute bottom-6 left-6 right-6">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm p-4 rounded-xl">
                           {festivalIcons[index] && 
                             React.createElement(festivalIcons[index], {
                               className: "w-8 h-8 text-white drop-shadow-lg"
