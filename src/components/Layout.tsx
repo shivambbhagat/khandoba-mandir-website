@@ -237,34 +237,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         <div className="container mx-auto px-4 py-12 relative z-10">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            {/* Temple Info Column */}
-            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-primary/20">
-              <div className="flex items-center gap-3">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-md" />
-                  <img 
-                    src={khandobaLogo} 
-                    alt="Shri Khandoba" 
-                    className="relative w-12 h-12 rounded-full object-cover shadow-md border-2 border-primary"
-                  />
-                </div>
-                <div>
-                  <h3 className="font-bold text-foreground text-lg">{t.temple}</h3>
-                  <p className="text-sm text-muted-foreground">{t.location}</p>
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {language === 'mr' 
-                  ? 'श्री खंडोबा मंदिर, निमगाव-दावडी येथे आपले स्वागत आहे। येथे दर्शन घेऊन आशीर्वाद घ्या.'
-                  : language === 'hi'
-                  ? 'श्री खंडोबा मंदिर, निमगांव-दावडी में आपका स्वागत है। यहां दर्शन करें और आशीर्वाद प्राप्त करें।'
-                  : 'Welcome to Shri Khandoba Temple, Nimgaon-Davadi. Visit us for divine blessings.'}
-              </p>
-            </div>
-
             {/* Quick Links Column */}
-            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-secondary/20">
-              <h3 className="font-bold text-foreground text-lg mb-4 flex items-center gap-2">
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-secondary/20 hover:shadow-2xl transition-shadow">
+              <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-lg mb-4 flex items-center gap-2">
                 <span className="w-1 h-6 bg-gradient-to-b from-primary to-secondary rounded-full" />
                 {language === 'mr' ? 'द्रुत दुवे' : language === 'hi' ? 'त्वरित लिंक' : 'Quick Links'}
               </h3>
@@ -273,7 +248,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                   <Link
                     key={link.path}
                     to={link.path}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary hover:translate-x-1 transition-all"
                   >
                     {link.label}
                   </Link>
@@ -282,8 +257,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             {/* Contact Info Column */}
-            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-accent/20">
-              <h3 className="font-bold text-foreground text-lg mb-4 flex items-center gap-2">
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-accent/20 hover:shadow-2xl transition-shadow">
+              <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent text-lg mb-4 flex items-center gap-2">
                 <span className="w-1 h-6 bg-gradient-to-b from-secondary to-accent rounded-full" />
                 {language === 'mr' ? 'संपर्क माहिती' : language === 'hi' ? 'संपर्क जानकारी' : 'Contact Info'}
               </h3>
@@ -291,25 +266,30 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
                 <div>
                   <p className="font-semibold text-foreground mb-1">Shri Babasaheb Bhagat</p>
                   <p className="text-muted-foreground mb-1">(Khandoba Pujari)</p>
-                  <a href="tel:9922058279" className="text-primary hover:underline font-medium">
+                  <a href="tel:9922058279" className="inline-flex items-center gap-1 text-primary hover:underline font-medium">
                     📞 9922058279
                   </a>
                 </div>
-                <div className="pt-2">
-                  <p className="font-semibold text-foreground mb-1">
-                    {language === 'mr' ? 'पत्ता:' : language === 'hi' ? 'पता:' : 'Address:'}
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Khandoba Temple, Deulwada<br />
-                    Nimgaon, Rajgurunagar<br />
-                    Khed, Pune 410505
-                  </p>
-                </div>
+              </div>
+            </div>
+
+            {/* Address Column */}
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-primary/20 hover:shadow-2xl transition-shadow">
+              <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary text-lg mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-accent to-primary rounded-full" />
+                {language === 'mr' ? 'पत्ता' : language === 'hi' ? 'पता' : 'Address'}
+              </h3>
+              <div className="space-y-3 text-sm">
+                <p className="text-muted-foreground leading-relaxed">
+                  Khandoba Temple, Deulwada<br />
+                  Nimgaon, Rajgurunagar<br />
+                  Khed, Pune 410505
+                </p>
                 <a 
                   href="https://maps.app.goo.gl/qp2P9AB6gwkKhVUDA" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                  className="inline-flex items-center gap-2 text-primary hover:underline font-medium hover:translate-x-1 transition-all"
                 >
                   <MapPin className="w-4 h-4" />
                   {language === 'mr' ? 'Google Maps वर पहा' : language === 'hi' ? 'Google Maps पर देखें' : 'View on Google Maps'}
@@ -318,9 +298,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             </div>
 
             {/* Map Column */}
-            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-primary/20">
-              <h3 className="font-bold text-foreground text-lg mb-4 flex items-center gap-2">
-                <span className="w-1 h-6 bg-gradient-to-b from-accent to-primary rounded-full" />
+            <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-orange-300/20 hover:shadow-2xl transition-shadow">
+              <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 text-lg mb-4 flex items-center gap-2">
+                <span className="w-1 h-6 bg-gradient-to-b from-orange-500 to-red-500 rounded-full" />
                 {language === 'mr' ? 'आमचे स्थान' : language === 'hi' ? 'हमारा स्थान' : 'Our Location'}
               </h3>
               <div className="w-full h-48 rounded-xl overflow-hidden shadow-lg border-2 border-primary/30 ring-2 ring-primary/10">

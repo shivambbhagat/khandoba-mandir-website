@@ -143,11 +143,14 @@ const Home = () => {
       </section>
 
       {/* Deity Image and Features Section */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-16 px-4 bg-gradient-to-br from-orange-50/50 via-yellow-50/50 to-red-50/50 dark:from-orange-950/10 dark:via-yellow-950/10 dark:to-red-950/10 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2" />
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Deity Image */}
-            <div className="rounded-xl overflow-hidden shadow-2xl">
+            <div className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20 hover:ring-primary/40 transition-all hover:scale-[1.02] duration-300">
               <img 
                 src={khandobaDeity} 
                 alt="Shri Khandoba Deity"
@@ -159,11 +162,16 @@ const Home = () => {
             <div className="grid gap-8">
               {t.features.map((feature, index) => {
                 const Icon = feature.icon;
+                const gradients = [
+                  'from-orange-500 to-red-500',
+                  'from-yellow-500 to-orange-500',
+                  'from-red-500 to-pink-500'
+                ];
                 return (
-                  <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
+                  <Card key={index} className="p-8 hover:shadow-2xl transition-all hover:-translate-y-1 bg-white/80 dark:bg-card/80 backdrop-blur-sm border-2 border-primary/20">
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-7 h-7 text-primary" />
+                      <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${gradients[index]} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                        <Icon className="w-7 h-7 text-white" />
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
@@ -179,22 +187,29 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">{t.about.title}</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">{t.about.description}</p>
+      <section className="py-16 px-4 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 dark:from-yellow-950/10 dark:via-orange-950/10 dark:to-red-950/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--secondary)/0.1),transparent_50%)]" />
+        
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">{t.about.title}</h2>
+          <div className="bg-white/60 dark:bg-card/60 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border-2 border-primary/20">
+            <p className="text-lg text-muted-foreground leading-relaxed">{t.about.description}</p>
+          </div>
         </div>
       </section>
 
       {/* Quick Contact CTA */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
         <div className="container mx-auto max-w-2xl">
-          <Card className="p-8 text-center bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
-            <Phone className="w-12 h-12 mx-auto mb-4 text-primary" />
-            <h3 className="text-2xl font-bold mb-4 text-foreground">{t.quickContact}</h3>
+          <Card className="p-8 text-center bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/40 dark:via-yellow-950/40 dark:to-red-950/40 border-4 border-primary/30 shadow-2xl hover:shadow-primary/20 hover:scale-105 transition-all">
+            <div className="inline-block p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-full mb-4 shadow-lg">
+              <Phone className="w-12 h-12 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">{t.quickContact}</h3>
             <a 
               href="tel:9922058279" 
-              className="text-3xl font-bold text-primary hover:text-secondary transition-colors"
+              className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent hover:scale-110 inline-block transition-transform"
             >
               9922058279
             </a>
