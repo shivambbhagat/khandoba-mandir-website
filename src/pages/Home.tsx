@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { Calendar, MapPin, Phone, Clock } from 'lucide-react';
+import { Phone, History, Image, Calendar, MapPin, PhoneCall, Music } from 'lucide-react';
 import khandobaDeity from '@/assets/khandoba-deity-new.jpg';
 
 const content = {
@@ -14,23 +14,17 @@ const content = {
       description: 'मल्लारी मार्तंड, मलय माणिक, जेजुरी च्या राजा श्री खंडोबा यांच्या आशीर्वादाने भारलेले हे पवित्र धाम भक्तांच्या श्रद्धेचे केंद्र आहे.',
       cta: 'दर्शन योजना करा'
     },
-    features: [
-      {
-        title: 'पवित्र दर्शन',
-        description: 'दररोज सकाळी ५:०० ते रात्री ९:०० पर्यंत मंदिर उघडे असते',
-        icon: Clock
-      },
-      {
-        title: 'सोपी पोहोच',
-        description: 'पुणे आणि सोलापूर मधून येथे येणे अतिशय सोपे आहे',
-        icon: MapPin
-      },
-      {
-        title: 'विशेष पूजा',
-        description: 'चांपा षष्ठी, दत्त जयंती आणि भद्रपद वाड्या सहावीला विशेष उत्सव',
-        icon: Calendar
-      }
-    ],
+    navigation: {
+      title: 'मंदिर माहिती',
+      pages: [
+        { name: 'इतिहास', path: '/history', icon: History },
+        { name: 'गॅलरी', path: '/gallery', icon: Image },
+        { name: 'उत्सव', path: '/utsav', icon: Calendar },
+        { name: 'भेट द्या', path: '/visit', icon: MapPin },
+        { name: 'संपर्क', path: '/contact', icon: PhoneCall },
+        { name: 'जागरण गोंधळ', path: '/jagaran-gondal', icon: Music }
+      ]
+    },
     about: {
       title: 'भक्तिमय वातावरण',
       description: 'श्री खंडोबा मंदिर हे महाराष्ट्रातील सर्वात पवित्र मंदिरांपैकी एक आहे. येथील शांत वातावरण आणि दिव्य ऊर्जा भक्तांना आध्यात्मिक शांती प्रदान करते. येथे येणारे प्रत्येक भक्त श्री मल्हारीच्या कृपेने धन्य होतो.'
@@ -45,23 +39,17 @@ const content = {
       description: 'This holy shrine blessed by Mallari Martand, Malay Manik, King of Jejuri Shri Khandoba is the center of devotion for millions of devotees.',
       cta: 'Plan Your Visit'
     },
-    features: [
-      {
-        title: 'Sacred Darshan',
-        description: 'Temple open daily from 5:00 AM to 9:00 PM',
-        icon: Clock
-      },
-      {
-        title: 'Easy Access',
-        description: 'Easily accessible from Pune and Solapur',
-        icon: MapPin
-      },
-      {
-        title: 'Special Pujas',
-        description: 'Special celebrations on Champa Shashthi, Datta Jayanti and Bhadrapad Vadya Shashthi',
-        icon: Calendar
-      }
-    ],
+    navigation: {
+      title: 'Temple Information',
+      pages: [
+        { name: 'History', path: '/history', icon: History },
+        { name: 'Gallery', path: '/gallery', icon: Image },
+        { name: 'Festivals', path: '/utsav', icon: Calendar },
+        { name: 'Visit', path: '/visit', icon: MapPin },
+        { name: 'Contact', path: '/contact', icon: PhoneCall },
+        { name: 'Jagaran Gondal', path: '/jagaran-gondal', icon: Music }
+      ]
+    },
     about: {
       title: 'Divine Atmosphere',
       description: 'Shri Khandoba Temple is one of the most sacred temples in Maharashtra. The peaceful environment and divine energy here provide spiritual peace to devotees. Every devotee who comes here is blessed by the grace of Shri Malhari.'
@@ -76,23 +64,17 @@ const content = {
       description: 'मल्लारी मार्तंड, मलय माणिक, जेजुरी के राजा श्री खंडोबा के आशीर्वाद से भरा यह पवित्र धाम भक्तों की श्रद्धा का केंद्र है।',
       cta: 'दर्शन की योजना बनाएं'
     },
-    features: [
-      {
-        title: 'पवित्र दर्शन',
-        description: 'मंदिर प्रतिदिन सुबह ५:०० से रात ९:०० तक खुला रहता है',
-        icon: Clock
-      },
-      {
-        title: 'आसान पहुंच',
-        description: 'पुणे और सोलापुर से यहां पहुंचना बहुत आसान है',
-        icon: MapPin
-      },
-      {
-        title: 'विशेष पूजा',
-        description: 'चांपा षष्ठी, दत्त जयंती और भाद्रपद वाड्या षष्ठी पर विशेष उत्सव',
-        icon: Calendar
-      }
-    ],
+    navigation: {
+      title: 'मंदिर जानकारी',
+      pages: [
+        { name: 'इतिहास', path: '/history', icon: History },
+        { name: 'गैलरी', path: '/gallery', icon: Image },
+        { name: 'उत्सव', path: '/utsav', icon: Calendar },
+        { name: 'दर्शन', path: '/visit', icon: MapPin },
+        { name: 'संपर्क', path: '/contact', icon: PhoneCall },
+        { name: 'जागरण गोंधळ', path: '/jagaran-gondal', icon: Music }
+      ]
+    },
     about: {
       title: 'भक्तिमय वातावरण',
       description: 'श्री खंडोबा मंदिर महाराष्ट्र के सबसे पवित्र मंदिरों में से एक है। यहां का शांत वातावरण और दिव्य ऊर्जा भक्तों को आध्यात्मिक शांति प्रदान करती है। यहां आने वाला हर भक्त श्री मल्हारी की कृपा से धन्य होता है।'
@@ -142,7 +124,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Deity Image and Features Section */}
+      {/* Deity Image and Navigation Section */}
       <section className="py-16 px-4 bg-gradient-to-br from-orange-50/50 via-yellow-50/50 to-red-50/50 dark:from-orange-950/10 dark:via-yellow-950/10 dark:to-red-950/10 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2" />
@@ -158,29 +140,35 @@ const Home = () => {
               />
             </div>
             
-            {/* Features Grid */}
-            <div className="grid gap-8">
-              {t.features.map((feature, index) => {
-                const Icon = feature.icon;
-                const gradients = [
-                  'from-orange-500 to-red-500',
-                  'from-yellow-500 to-orange-500',
-                  'from-red-500 to-pink-500'
-                ];
-                return (
-                  <Card key={index} className="p-8 hover:shadow-2xl transition-all hover:-translate-y-1 bg-white/80 dark:bg-card/80 backdrop-blur-sm border-2 border-primary/20">
-                    <div className="flex items-start gap-4">
-                      <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${gradients[index]} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                        <p className="text-muted-foreground">{feature.description}</p>
-                      </div>
-                    </div>
-                  </Card>
-                );
-              })}
+            {/* Navigation Buttons */}
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+                {t.navigation.title}
+              </h2>
+              <div className="grid grid-cols-2 gap-4">
+                {t.navigation.pages.map((page, index) => {
+                  const Icon = page.icon;
+                  const gradients = [
+                    'from-orange-500 to-red-500',
+                    'from-yellow-500 to-orange-500',
+                    'from-red-500 to-pink-500',
+                    'from-pink-500 to-purple-500',
+                    'from-purple-500 to-indigo-500',
+                    'from-indigo-500 to-blue-500'
+                  ];
+                  return (
+                    <Link key={index} to={page.path}>
+                      <Button 
+                        variant="outline" 
+                        className={`w-full h-20 text-lg font-semibold bg-gradient-to-br ${gradients[index]} text-white border-0 hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-xl`}
+                      >
+                        <Icon className="w-6 h-6 mr-2" />
+                        {page.name}
+                      </Button>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
