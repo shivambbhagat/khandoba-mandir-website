@@ -70,18 +70,22 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-card border-b border-border shadow-sm">
-        <div className="container mx-auto px-4">
+      <header className="sticky top-0 z-50 bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50 dark:from-orange-950/40 dark:via-yellow-950/40 dark:to-red-950/40 border-b-4 border-primary shadow-lg overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           {/* Temple Name - Top Row */}
-          <div className="flex items-center justify-center gap-3 py-4 border-b border-border/50 bg-gradient-to-r from-primary/20 via-primary/30 to-primary/20">
+          <div className="flex items-center justify-center gap-3 py-4 border-b border-primary/20 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10">
             <img 
               src={khandobaLogo} 
               alt="Shri Khandoba" 
-              className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-md border-2 border-primary"
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-lg border-2 border-primary ring-2 ring-primary/30"
             />
             <div className="text-center">
-              <h1 className="text-lg md:text-2xl font-bold text-foreground">{t.temple}</h1>
-              <p className="text-xs md:text-sm text-muted-foreground">{t.location}</p>
+              <h1 className="text-lg md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">{t.temple}</h1>
+              <p className="text-xs md:text-sm text-muted-foreground font-medium">{t.location}</p>
             </div>
           </div>
           
@@ -92,20 +96,20 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               <img 
                 src={khandobaLogo} 
                 alt="Shri Khandoba Devsthan Nimgaon Dawadi" 
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-lg border-2 border-primary"
+                className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shadow-lg border-2 border-primary ring-2 ring-primary/30"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-1 bg-white/60 dark:bg-card/60 backdrop-blur-sm rounded-xl p-1 shadow-md border border-primary/20">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                     location.pathname === link.path
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground hover:bg-muted'
+                      ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md'
+                      : 'text-foreground hover:bg-primary/10 hover:text-primary'
                   }`}
                 >
                   {link.label}
@@ -116,44 +120,44 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             {/* Language Selector & Social Media & Mobile Menu */}
             <div className="flex items-center gap-3">
               {/* Social Media Icons */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <a 
                   href="https://instagram.com/nimgaon_cha_raja" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  className="p-2 bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-full hover:scale-110 transition-all shadow-md"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-5 h-5" />
+                  <Instagram className="w-4 h-4" />
                 </a>
                 <a 
                   href="#" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  className="p-2 bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-full hover:scale-110 transition-all shadow-md"
                   aria-label="Facebook"
                 >
-                  <Facebook className="w-5 h-5" />
+                  <Facebook className="w-4 h-4" />
                 </a>
                 <a 
                   href="https://www.youtube.com/@NimgaonKhandoba" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2 hover:bg-muted rounded-full transition-colors"
+                  className="p-2 bg-gradient-to-br from-red-600 to-red-800 text-white rounded-full hover:scale-110 transition-all shadow-md"
                   aria-label="YouTube"
                 >
-                  <Youtube className="w-5 h-5" />
+                  <Youtube className="w-4 h-4" />
                 </a>
               </div>
 
-              <div className="flex gap-0.5 bg-muted rounded-md p-0.5">
+              <div className="flex gap-0.5 bg-white/60 dark:bg-card/60 backdrop-blur-sm rounded-lg p-1 shadow-md border border-primary/20">
                 {(['mr', 'en', 'hi'] as Language[]).map((lang) => (
                   <Button
                     key={lang}
                     variant={language === lang ? 'default' : 'ghost'}
                     size="sm"
                     onClick={() => setLanguage(lang)}
-                    className="text-xs px-2 py-1 h-7 min-w-[45px]"
+                    className={`text-xs px-2 py-1 h-7 min-w-[45px] ${language === lang ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white' : ''}`}
                   >
                     {languageNames[lang]}
                   </Button>
@@ -164,7 +168,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden"
+                className="md:hidden bg-white/60 dark:bg-card/60 backdrop-blur-sm shadow-md"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? <X /> : <Menu />}
@@ -174,16 +178,16 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <nav className="md:hidden py-4 border-t border-border">
+            <nav className="md:hidden py-4 border-t border-primary/20 bg-white/60 dark:bg-card/60 backdrop-blur-sm rounded-b-xl mb-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-4 py-3 text-sm font-medium transition-colors ${
+                  className={`block px-4 py-3 text-sm font-medium transition-all ${
                     location.pathname === link.path
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground hover:bg-muted'
+                      ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white'
+                      : 'text-foreground hover:bg-primary/10 hover:text-primary'
                   }`}
                 >
                   {link.label}

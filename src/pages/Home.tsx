@@ -2,7 +2,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { Phone, History, Image, Calendar, MapPin, PhoneCall, Music } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import khandobaDeity from '@/assets/khandoba-deity-new.jpg';
 
 const content = {
@@ -17,12 +17,12 @@ const content = {
     navigation: {
       title: 'मंदिर माहिती',
       pages: [
-        { name: 'इतिहास', path: '/history', icon: History },
-        { name: 'गॅलरी', path: '/gallery', icon: Image },
-        { name: 'उत्सव', path: '/utsav', icon: Calendar },
-        { name: 'भेट द्या', path: '/visit', icon: MapPin },
-        { name: 'संपर्क', path: '/contact', icon: PhoneCall },
-        { name: 'जागरण गोंधळ', path: '/jagaran-gondal', icon: Music }
+        { name: 'इतिहास', path: '/history' },
+        { name: 'गॅलरी', path: '/gallery' },
+        { name: 'उत्सव', path: '/utsav' },
+        { name: 'भेट द्या', path: '/visit' },
+        { name: 'संपर्क', path: '/contact' },
+        { name: 'जागरण गोंधळ', path: '/jagaran-gondal' }
       ]
     },
     about: {
@@ -42,12 +42,12 @@ const content = {
     navigation: {
       title: 'Temple Information',
       pages: [
-        { name: 'History', path: '/history', icon: History },
-        { name: 'Gallery', path: '/gallery', icon: Image },
-        { name: 'Festivals', path: '/utsav', icon: Calendar },
-        { name: 'Visit', path: '/visit', icon: MapPin },
-        { name: 'Contact', path: '/contact', icon: PhoneCall },
-        { name: 'Jagaran Gondal', path: '/jagaran-gondal', icon: Music }
+        { name: 'History', path: '/history' },
+        { name: 'Gallery', path: '/gallery' },
+        { name: 'Festivals', path: '/utsav' },
+        { name: 'Visit', path: '/visit' },
+        { name: 'Contact', path: '/contact' },
+        { name: 'Jagaran Gondal', path: '/jagaran-gondal' }
       ]
     },
     about: {
@@ -67,12 +67,12 @@ const content = {
     navigation: {
       title: 'मंदिर जानकारी',
       pages: [
-        { name: 'इतिहास', path: '/history', icon: History },
-        { name: 'गैलरी', path: '/gallery', icon: Image },
-        { name: 'उत्सव', path: '/utsav', icon: Calendar },
-        { name: 'दर्शन', path: '/visit', icon: MapPin },
-        { name: 'संपर्क', path: '/contact', icon: PhoneCall },
-        { name: 'जागरण गोंधळ', path: '/jagaran-gondal', icon: Music }
+        { name: 'इतिहास', path: '/history' },
+        { name: 'गैलरी', path: '/gallery' },
+        { name: 'उत्सव', path: '/utsav' },
+        { name: 'दर्शन', path: '/visit' },
+        { name: 'संपर्क', path: '/contact' },
+        { name: 'जागरण गोंधळ', path: '/jagaran-gondal' }
       ]
     },
     about: {
@@ -147,22 +147,28 @@ const Home = () => {
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 {t.navigation.pages.map((page, index) => {
-                  const Icon = page.icon;
-                  const gradients = [
-                    'from-orange-500 to-red-500',
-                    'from-yellow-500 to-orange-500',
-                    'from-red-500 to-pink-500',
-                    'from-pink-500 to-purple-500',
-                    'from-purple-500 to-indigo-500',
-                    'from-indigo-500 to-blue-500'
+                  const borderColors = [
+                    'border-orange-500/30 hover:border-orange-500',
+                    'border-yellow-500/30 hover:border-yellow-500',
+                    'border-red-500/30 hover:border-red-500',
+                    'border-pink-500/30 hover:border-pink-500',
+                    'border-purple-500/30 hover:border-purple-500',
+                    'border-indigo-500/30 hover:border-indigo-500'
+                  ];
+                  const textColors = [
+                    'text-orange-600 dark:text-orange-400',
+                    'text-yellow-600 dark:text-yellow-400',
+                    'text-red-600 dark:text-red-400',
+                    'text-pink-600 dark:text-pink-400',
+                    'text-purple-600 dark:text-purple-400',
+                    'text-indigo-600 dark:text-indigo-400'
                   ];
                   return (
                     <Link key={index} to={page.path}>
                       <Button 
                         variant="outline" 
-                        className={`w-full h-20 text-lg font-semibold bg-gradient-to-br ${gradients[index]} text-white border-0 hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-xl`}
+                        className={`w-full h-16 text-lg font-semibold bg-white/60 dark:bg-card/60 backdrop-blur-sm ${borderColors[index]} border-2 ${textColors[index]} hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-xl`}
                       >
-                        <Icon className="w-6 h-6 mr-2" />
                         {page.name}
                       </Button>
                     </Link>
