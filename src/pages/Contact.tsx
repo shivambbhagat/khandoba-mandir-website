@@ -10,7 +10,7 @@ const content = {
       title: 'संपर्क माहिती',
       phone: 'फोन',
       address: 'पत्ता',
-      addressLine: 'श्री खंडोबा मंदिर, निमगाव-दावडी, तालुका बारामती, जिल्हा पुणे, महाराष्ट्र - ४१३११५'
+      addressLine: 'श्री खंडोबा मंदिर, निमगाव-दावडी, तालुका खेड, जिल्हा पुणे, महाराष्ट्र - ४१०५०५'
     },
     donation: {
       title: 'देणगी आणि दान',
@@ -59,7 +59,7 @@ const content = {
       title: 'Contact Information',
       phone: 'Phone',
       address: 'Address',
-      addressLine: 'Shri Khandoba Temple, Nimgaon-Davadi, Taluka Baramati, District Pune, Maharashtra - 413115'
+      addressLine: 'Shri Khandoba Temple, Nimgaon-Davadi, Taluka Khed , District Pune, Maharashtra - 410505'
     },
     donation: {
       title: 'Donations & Contributions',
@@ -108,7 +108,7 @@ const content = {
       title: 'संपर्क जानकारी',
       phone: 'फोन',
       address: 'पता',
-      addressLine: 'श्री खंडोबा मंदिर, निमगांव-दावडी, तालुका बारामती, जिला पुणे, महाराष्ट्र - ४१३११५'
+      addressLine: 'श्री खंडोबा मंदिर, निमगांव-दावडी, तालुका खेड, जिला पुणे, महाराष्ट्र - ४१०५०५'
     },
     donation: {
       title: 'दान और योगदान',
