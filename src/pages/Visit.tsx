@@ -7,8 +7,8 @@ const content = {
     subtitle: 'तुमच्या भेटीची योजना करा',
     timings: {
       title: 'मंदिर वेळापत्रक',
-      morning: 'सकाळी: ५:०० ते १२:००',
-      evening: 'संध्याकाळ: ४:०० ते ९:००',
+      morning: 'सकाळी: ५:०० ',
+      evening: 'संध्याकाळ: ९:०० पर्यंत',
       note: 'विशेष पूजा आणि उत्सवाच्या वेळी मंदिर अधिक वेळ उघडे राहते'
     },
     location: {
@@ -76,8 +76,8 @@ const content = {
     subtitle: 'Plan Your Darshan',
     timings: {
       title: 'Temple Timings',
-      morning: 'Morning: 5:00 AM to 12:00 PM',
-      evening: 'Evening: 4:00 PM to 9:00 PM',
+      morning: 'Morning: 5:00 AM ',
+      evening: 'Evening: Upto 9:00 PM',
       note: 'Temple remains open longer during festivals'
     },
     location: {
@@ -145,8 +145,8 @@ const content = {
     subtitle: 'अपनी यात्रा की योजना बनाएं',
     timings: {
       title: 'मंदिर समय',
-      morning: 'सुबह: ५:०० से १२:०० तक',
-      evening: 'शाम: ४:०० से ९:०० तक',
+      morning: 'सुबह: ५:०० से ',
+      evening: 'शाम:  ९:०० तक',
       note: 'उत्सव के समय मंदिर अधिक समय खुला'
     },
     location: {
