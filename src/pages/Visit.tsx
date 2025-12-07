@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Clock, MapPin, Calendar, Utensils, Bus, Train } from 'lucide-react';
+import { Clock, MapPin, Calendar, Utensils, Bus } from 'lucide-react';
 
 const content = {
   mr: {
@@ -15,9 +15,10 @@ const content = {
       title: 'स्थान आणि प्रवास',
       address: 'श्री खंडोबा मंदिर, निमगाव-दावडी, जिल्हा पुणे, महाराष्ट्र',
       fromPune: 'पुण्यापासून: सुमारे ८० किमी',
-      fromSolapur: 'सोलापूरपासून: सुमारे ७० किमी',
-      byBus: 'बस: पुणे, सोलापूर येथून सेवा',
-      byTrain: 'रेल्वे: बारामती स्थानक (२५ किमी)'
+      busRoute: 'PMPML मार्ग ३७०',
+      busRouteDetails: 'भोसरी - दावडी गाव/निमगाव',
+      fromBhosari: 'भोसरी वरून: सकाळी १०:०५, दुपारी २:१५, संध्याकाळी ६:२०',
+      fromNimgaon: 'निमगाव वरून: सकाळी ७:५०, सकाळी ११:५०, दुपारी ४:००'
     },
     festivals: {
       title: 'विशेष उत्सव',
@@ -83,9 +84,10 @@ const content = {
       title: 'Location & Travel',
       address: 'Shri Khandoba Temple, Nimgaon-Davadi, District Pune, Maharashtra',
       fromPune: 'From Pune: Approximately 80 km',
-      fromSolapur: 'From Solapur: Approximately 70 km',
-      byBus: 'By Bus: Services from Pune, Solapur',
-      byTrain: 'By Train: Baramati station (25 km)'
+      busRoute: 'PMPML Route 370',
+      busRouteDetails: 'Bhosari - Dawadi Gaon/Nimgaon',
+      fromBhosari: 'From Bhosari: 10:05 AM, 2:15 PM, 6:20 PM',
+      fromNimgaon: 'From Nimgaon: 7:50 AM, 11:50 AM, 4:00 PM'
     },
     festivals: {
       title: 'Special Festivals',
@@ -151,9 +153,10 @@ const content = {
       title: 'स्थान और यात्रा',
       address: 'श्री खंडोबा मंदिर, निमगांव-दावडी, जिला पुणे, महाराष्ट्र',
       fromPune: 'पुणे से: लगभग ८० किमी',
-      fromSolapur: 'सोलापुर से: लगभग ७० किमी',
-      byBus: 'बस से: पुणे, सोलापुर से सेवा',
-      byTrain: 'रेल से: बारामती स्टेशन (२५ किमी)'
+      busRoute: 'PMPML मार्ग ३७०',
+      busRouteDetails: 'भोसरी - दावडी गांव/निमगांव',
+      fromBhosari: 'भोसरी से: सुबह १०:०५, दोपहर २:१५, शाम ६:२०',
+      fromNimgaon: 'निमगांव से: सुबह ७:५०, सुबह ११:५०, दोपहर ४:००'
     },
     festivals: {
       title: 'विशेष उत्सव',
@@ -261,14 +264,14 @@ const Visit = () => {
                 <div className="space-y-3 text-muted-foreground">
                   <p className="font-semibold text-foreground leading-relaxed">{t.location.address}</p>
                   <p className="leading-relaxed">{t.location.fromPune}</p>
-                  <p className="leading-relaxed">{t.location.fromSolapur}</p>
-                  <div className="flex items-center gap-2 pt-2">
-                    <Bus className="w-5 h-5 text-primary flex-shrink-0" />
-                    <p className="leading-relaxed">{t.location.byBus}</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Train className="w-5 h-5 text-primary flex-shrink-0" />
-                    <p className="leading-relaxed">{t.location.byTrain}</p>
+                  <div className="mt-4 p-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Bus className="w-5 h-5 text-primary flex-shrink-0" />
+                      <p className="font-bold text-foreground">{t.location.busRoute}</p>
+                    </div>
+                    <p className="text-sm text-foreground font-medium mb-2">{t.location.busRouteDetails}</p>
+                    <p className="text-sm leading-relaxed">{t.location.fromBhosari}</p>
+                    <p className="text-sm leading-relaxed">{t.location.fromNimgaon}</p>
                   </div>
                 </div>
               </div>
