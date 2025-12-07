@@ -14,7 +14,7 @@ const content = {
     location: {
       title: 'स्थान आणि प्रवास',
       address: 'श्री खंडोबा मंदिर, निमगाव-दावडी, जिल्हा पुणे, महाराष्ट्र',
-      fromPune: 'पुण्यापासून: सुमारे ८० किमी',
+      fromPune: 'पुण्यापासून: सुमारे ४० किमी',
       busRoute: 'PMPML मार्ग ३७०',
       busRouteDetails: 'भोसरी - दावडी गाव/निमगाव',
       fromBhosari: 'भोसरी वरून: सकाळी १०:०५, दुपारी २:१५, संध्याकाळी ६:२०',
@@ -83,7 +83,7 @@ const content = {
     location: {
       title: 'Location & Travel',
       address: 'Shri Khandoba Temple, Nimgaon-Davadi, District Pune, Maharashtra',
-      fromPune: 'From Pune: Approximately 80 km',
+      fromPune: 'From Pune: Approximately 40 km',
       busRoute: 'PMPML Route 370',
       busRouteDetails: 'Bhosari - Dawadi Gaon/Nimgaon',
       fromBhosari: 'From Bhosari: 10:05 AM, 2:15 PM, 6:20 PM',
@@ -152,7 +152,7 @@ const content = {
     location: {
       title: 'स्थान और यात्रा',
       address: 'श्री खंडोबा मंदिर, निमगांव-दावडी, जिला पुणे, महाराष्ट्र',
-      fromPune: 'पुणे से: लगभग ८० किमी',
+      fromPune: 'पुणे से: लगभग  ४० किमी',
       busRoute: 'PMPML मार्ग ३७०',
       busRouteDetails: 'भोसरी - दावडी गांव/निमगांव',
       fromBhosari: 'भोसरी से: सुबह १०:०५, दोपहर २:१५, शाम ६:२०',
