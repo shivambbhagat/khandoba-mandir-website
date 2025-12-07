@@ -1,6 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Card } from '@/components/ui/card';
-import { Phone, Mail, MapPin, Heart, Users } from 'lucide-react';
+import { Phone, MapPin, Heart, Users } from 'lucide-react';
 
 const content = {
   mr: {
@@ -14,7 +13,7 @@ const content = {
     },
     donation: {
       title: 'देणगी आणि दान',
-      description: 'श्री खंडोबा मंदिराच्या देखभाल, दुरुस्ती आणि धार्मिक कार्यासाठी तुमचे दान अत्यंत उपयुक्त ठरते. तुमच्या योगदानाने गरीबांना अन्नदान, मंदिराची देखभाल आणि विविध धार्मिक कार्ये चालू राहतात.',
+      description: 'श्री खंडोबा मंदिराच्या देखभाल, दुरुस्ती आणि धार्मिक कार्यासाठी तुमचे दान अत्यंत उपयुक्त ठरते.',
       ways: {
         title: 'दान देण्याचे मार्ग',
         items: [
@@ -37,7 +36,7 @@ const content = {
     },
     seva: {
       title: 'सेवा संधी',
-      description: 'मंदिरात विविध सेवा करण्याची संधी उपलब्ध आहे',
+      description: 'मंदिरात विविध सेवा करण्याची संधी उपलब्ध',
       items: [
         'मंदिर स्वच्छता सेवा',
         'भंडार्‍यात सेवा',
@@ -48,7 +47,7 @@ const content = {
     },
     message: {
       title: 'संदेश पाठवा',
-      description: 'तुमचे प्रश्न, सूचना किंवा प्रतिक्रिया आम्हाला कळवा. आम्ही लवकरच तुमच्याशी संपर्क साधू.',
+      description: 'तुमचे प्रश्न, सूचना किंवा प्रतिक्रिया आम्हाला कळवा.',
       note: 'कृपया फोनद्वारे संपर्क साधा किंवा थेट मंदिरात भेट द्या.'
     }
   },
@@ -59,24 +58,24 @@ const content = {
       title: 'Contact Information',
       phone: 'Phone',
       address: 'Address',
-      addressLine: 'Shri Khandoba Temple, Nimgaon-Davadi, Taluka Khed , District Pune, Maharashtra - 410505'
+      addressLine: 'Shri Khandoba Temple, Nimgaon-Davadi, Taluka Khed, District Pune, Maharashtra - 410505'
     },
     donation: {
       title: 'Donations & Contributions',
-      description: 'Your donations are extremely useful for the maintenance, repair and religious activities of Shri Khandoba Temple. Your contribution helps in food donation to the poor, temple maintenance and various religious activities.',
+      description: 'Your donations are extremely useful for the maintenance and religious activities of Shri Khandoba Temple.',
       ways: {
         title: 'Ways to Donate',
         items: [
           'Direct visit to the temple',
           'Through bank transfer',
           'By organizing Bhandara',
-          'Special contribution for temple development'
+          'Special contribution for development'
         ]
       },
       benefits: {
         title: 'Use of Your Donation',
         items: [
-          'Food donation to the poor (Bhandara)',
+          'Food donation to the poor',
           'Daily temple maintenance',
           'Organization of religious festivals',
           'Facilities for devotees',
@@ -86,7 +85,7 @@ const content = {
     },
     seva: {
       title: 'Seva Opportunities',
-      description: 'Various seva opportunities available at the temple',
+      description: 'Various seva opportunities available at temple',
       items: [
         'Temple cleaning service',
         'Service in Bhandara',
@@ -97,8 +96,8 @@ const content = {
     },
     message: {
       title: 'Send a Message',
-      description: 'Let us know your questions, suggestions or feedback. We will contact you soon.',
-      note: 'Please contact by phone or visit the temple directly.'
+      description: 'Let us know your questions, suggestions or feedback.',
+      note: 'Please contact by phone or visit temple directly.'
     }
   },
   hi: {
@@ -112,20 +111,20 @@ const content = {
     },
     donation: {
       title: 'दान और योगदान',
-      description: 'श्री खंडोबा मंदिर के रखरखाव, मरम्मत और धार्मिक कार्यों के लिए आपका दान अत्यंत उपयोगी है। आपके योगदान से गरीबों को अन्नदान, मंदिर का रखरखाव और विभिन्न धार्मिक कार्य जारी रहते हैं।',
+      description: 'श्री खंडोबा मंदिर के रखरखाव और धार्मिक कार्यों के लिए आपका दान अत्यंत उपयोगी है।',
       ways: {
         title: 'दान देने के तरीके',
         items: [
           'सीधे मंदिर में आकर',
           'बैंक स्थानांतरण के माध्यम से',
           'भंडारा आयोजन करके',
-          'मंदिर के विकास के लिए विशेष योगदान'
+          'विकास के लिए विशेष योगदान'
         ]
       },
       benefits: {
         title: 'आपके दान का उपयोग',
         items: [
-          'गरीबों को अन्नदान (भंडारा)',
+          'गरीबों को अन्नदान',
           'मंदिर का दैनिक रखरखाव',
           'धार्मिक उत्सवों का आयोजन',
           'भक्तों के लिए सुविधाएं',
@@ -135,7 +134,7 @@ const content = {
     },
     seva: {
       title: 'सेवा अवसर',
-      description: 'मंदिर में विभिन्न सेवा करने का अवसर उपलब्ध है',
+      description: 'मंदिर में विभिन्न सेवा का अवसर उपलब्ध है',
       items: [
         'मंदिर सफाई सेवा',
         'भंडारे में सेवा',
@@ -146,8 +145,8 @@ const content = {
     },
     message: {
       title: 'संदेश भेजें',
-      description: 'अपने प्रश्न, सुझाव या प्रतिक्रिया हमें बताएं। हम जल्द ही आपसे संपर्क करेंगे।',
-      note: 'कृपया फोन द्वारा संपर्क करें या सीधे मंदिर में आएं।'
+      description: 'अपने प्रश्न, सुझाव या प्रतिक्रिया हमें बताएं।',
+      note: 'कृपया फोन द्वारा संपर्क करें या सीधे मंदिर आएं।'
     }
   }
 };
@@ -157,110 +156,131 @@ const Contact = () => {
   const t = content[language];
 
   return (
-    <div className="py-12 px-4">
-      <div className="container mx-auto max-w-6xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">{t.title}</h1>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/20 dark:via-yellow-950/20 dark:to-red-950/20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+        
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+            {t.title}
+          </h1>
+          <div className="flex justify-center my-6">
+            <div className="h-2 w-32 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
+          </div>
           <p className="text-xl text-muted-foreground">{t.subtitle}</p>
         </div>
+      </section>
 
-        {/* Contact Info */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card className="p-8 md:p-10 bg-gradient-to-br from-primary/10 to-secondary/10">
-            <h2 className="text-2xl font-bold mb-6 text-foreground">{t.contact.title}</h2>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="font-semibold text-foreground mb-1">{t.contact.phone}</p>
-                  <a 
-                    href="tel:9922058279" 
-                    className="text-2xl font-bold text-primary hover:text-secondary transition-colors"
-                  >
-                    9922058279
-                  </a>
+      {/* Main Content */}
+      <section className="py-16 px-4 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-red-50/30 dark:from-orange-950/5 dark:via-yellow-950/5 dark:to-red-950/5">
+        <div className="container mx-auto max-w-6xl">
+          {/* Contact Info */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg border-2 border-primary/20 hover:shadow-2xl transition-shadow">
+              <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">{t.contact.title}</h2>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-gradient-to-br from-primary to-secondary rounded-xl shadow-md">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground mb-1">{t.contact.phone}</p>
+                    <a 
+                      href="tel:9922058279" 
+                      className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 hover:from-red-600 hover:to-pink-600 transition-all"
+                    >
+                      9922058279
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="font-semibold text-foreground mb-1">{t.contact.address}</p>
-                  <p className="text-muted-foreground mb-2">{t.contact.addressLine}</p>
-                  <a 
-                    href="https://share.google/pyGTj5JORfdA1TkLd" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:underline font-medium text-sm"
-                  >
-                    <MapPin className="w-4 h-4" />
-                    View on Google Maps
-                  </a>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-gradient-to-br from-secondary to-accent rounded-xl shadow-md">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground mb-1">{t.contact.address}</p>
+                    <p className="text-muted-foreground mb-2 leading-relaxed max-w-xs">{t.contact.addressLine}</p>
+                    <a 
+                      href="https://maps.app.goo.gl/qp2P9AB6gwkKhVUDA" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full hover:shadow-lg transition-all text-sm font-medium"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      View on Google Maps
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </Card>
 
-          <Card className="p-8 md:p-10">
-            <h2 className="text-2xl font-bold mb-4 text-foreground">{t.message.title}</h2>
-            <p className="text-muted-foreground mb-4">{t.message.description}</p>
-            <p className="text-sm text-muted-foreground bg-muted/50 p-4 rounded-lg">
-              {t.message.note}
-            </p>
-          </Card>
+            <div className="bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-lg border-2 border-secondary/20 hover:shadow-2xl transition-shadow">
+              <h2 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">{t.message.title}</h2>
+              <p className="text-muted-foreground mb-4 leading-relaxed">{t.message.description}</p>
+              <div className="p-4 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
+                <p className="text-sm text-muted-foreground">{t.message.note}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Donation Section */}
+          <div className="bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 md:p-10 mb-8 rounded-2xl shadow-lg border-2 border-accent/20 hover:shadow-2xl transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-gradient-to-br from-accent to-primary rounded-xl shadow-md">
+                <Heart className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">{t.donation.title}</h2>
+            </div>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">{t.donation.description}</p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 p-6 rounded-xl border border-primary/20">
+                <h3 className="text-xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">{t.donation.ways.title}</h3>
+                <ul className="space-y-3">
+                  {t.donation.ways.items.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="w-6 h-6 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-0.5">{index + 1}</span>
+                      <span className="text-muted-foreground leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-secondary/5 to-accent/5 p-6 rounded-xl border border-secondary/20">
+                <h3 className="text-xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">{t.donation.benefits.title}</h3>
+                <ul className="space-y-3">
+                  {t.donation.benefits.items.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-primary text-xl mt-0.5">✓</span>
+                      <span className="text-muted-foreground leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Seva Opportunities */}
+          <div className="bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 md:p-10 rounded-2xl shadow-lg border-2 border-primary/20 hover:shadow-2xl transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-gradient-to-br from-primary to-secondary rounded-xl shadow-md">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">{t.seva.title}</h2>
+            </div>
+            <p className="text-muted-foreground mb-6 leading-relaxed">{t.seva.description}</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {t.seva.items.map((item, index) => (
+                <div key={index} className="p-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl text-center border border-primary/20 hover:shadow-lg transition-all">
+                  <p className="text-foreground font-medium text-sm leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-
-        {/* Donation Section */}
-        <Card className="p-8 md:p-10 mb-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
-          <div className="flex items-center gap-3 mb-4">
-            <Heart className="w-8 h-8 text-accent" />
-            <h2 className="text-3xl font-bold text-foreground">{t.donation.title}</h2>
-          </div>
-          <p className="text-lg text-muted-foreground mb-8">{t.donation.description}</p>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">{t.donation.ways.title}</h3>
-              <ul className="space-y-3">
-                {t.donation.ways.items.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-accent text-xl mt-1">•</span>
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">{t.donation.benefits.title}</h3>
-              <ul className="space-y-3">
-                {t.donation.benefits.items.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-primary text-xl mt-1">✓</span>
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </Card>
-
-        {/* Seva Opportunities */}
-        <Card className="p-8 md:p-10">
-          <div className="flex items-center gap-3 mb-4">
-            <Users className="w-8 h-8 text-primary" />
-            <h2 className="text-2xl font-bold text-foreground">{t.seva.title}</h2>
-          </div>
-          <p className="text-muted-foreground mb-6">{t.seva.description}</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {t.seva.items.map((item, index) => (
-              <div key={index} className="p-4 bg-muted/50 rounded-lg text-center">
-                <p className="text-foreground font-medium">{item}</p>
-              </div>
-            ))}
-          </div>
-        </Card>
-      </div>
+      </section>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const translations = {
     abhishek: 'अभिषेक',
     gallery: 'फोटो गॅलरी',
     utsav: 'उत्सव',
-    temple: 'श्री खंडोबा मंदिर',
+    temple: 'निमगाव खंडोबा मंदिर',
     location: 'निमगाव-दावडी'
   },
   en: {
@@ -27,7 +27,7 @@ const translations = {
     abhishek: 'Abhishek',
     gallery: 'Photo Gallery',
     utsav: 'Festivals',
-    temple: 'Shri Khandoba Temple',
+    temple: 'Nimgaon Khandoba Temple',
     location: 'Nimgaon-Davadi'
   },
   hi: {
@@ -39,7 +39,7 @@ const translations = {
     abhishek: 'अभिषेक',
     gallery: 'फोटो गैलरी',
     utsav: 'उत्सव',
-    temple: 'श्री खंडोबा मंदिर',
+    temple: 'निमगाव खंडोबा मंदिर',
     location: 'निमगांव-दावडी'
   }
 };
