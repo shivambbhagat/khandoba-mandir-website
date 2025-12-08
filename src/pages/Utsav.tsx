@@ -135,74 +135,75 @@ const Utsav = () => {
   const t = content[language];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background w-full">
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/20 dark:via-yellow-950/20 dark:to-red-950/20 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/20 dark:via-yellow-950/20 dark:to-red-950/20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-secondary/10 rounded-full blur-3xl" />
         
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+        <div className="container mx-auto w-full max-w-5xl text-center relative z-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 leading-tight">
             {t.title}
           </h1>
-          <div className="flex justify-center my-6">
-            <div className="h-2 w-32 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
+          <div className="flex justify-center my-4 sm:my-6">
+            <div className="h-1.5 sm:h-2 w-20 sm:w-24 md:w-32 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
           </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground">{t.subtitle}</p>
         </div>
       </section>
 
       {/* Festivals Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-red-50/30 dark:from-orange-950/5 dark:via-yellow-950/5 dark:to-red-950/5">
-        <div className="container mx-auto max-w-7xl">
-          <div className="space-y-20">
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-red-50/30 dark:from-orange-950/5 dark:via-yellow-950/5 dark:to-red-950/5">
+        <div className="container mx-auto w-full max-w-6xl">
+          <div className="space-y-12 sm:space-y-16 md:space-y-20">
             {t.festivals.map((festival, index) => (
               <div key={index} className="scroll-mt-20">
                 {/* Festival Title */}
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 mb-4">
+                <div className="text-center mb-6 sm:mb-8">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 mb-3 sm:mb-4">
                     {festival.name}
                   </h2>
                   <div className="flex justify-center">
-                    <div className="h-1 w-24 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
+                    <div className="h-1 w-16 sm:w-20 md:w-24 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
                   </div>
                 </div>
 
                 {/* Two Column Layout */}
-                <div className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${
-                  index % 2 === 1 ? 'md:flex-row-reverse' : ''
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center ${
+                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}>
                   {/* Content Column */}
-                  <div className={`space-y-6 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                    <div className="space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-6 rounded-2xl shadow-lg border-2 border-primary/20">
-                      <div className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full shadow-md">
-                        <p className="font-semibold">{festival.date}</p>
+                  <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div className="space-y-3 sm:space-y-4 bg-white/60 dark:bg-card/60 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl shadow-lg border-2 border-primary/20">
+                      <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full shadow-md">
+                        <p className="font-semibold text-xs sm:text-sm md:text-base">{festival.date}</p>
                       </div>
                       
-                      <p className="text-lg text-muted-foreground leading-relaxed">
+                      <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
                         {festival.description}
                       </p>
                       
-                      <div className="border-l-4 border-gradient-to-b from-primary to-secondary pl-6 py-2 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-r-lg">
-                        <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mb-2 text-lg">
+                      <div className="border-l-4 border-gradient-to-b from-primary to-secondary pl-4 sm:pl-6 py-2 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-r-lg">
+                        <h3 className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600 mb-1 sm:mb-2 text-sm sm:text-base md:text-lg">
                           {language === 'mr' ? 'महत्त्व:' : language === 'hi' ? 'महत्व:' : 'Significance:'}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed">
+                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed text-justify">
                           {festival.significance}
                         </p>
                       </div>
                       
                       <div>
-                        <h3 className="font-bold text-foreground mb-4 text-lg">
+                        <h3 className="font-bold text-foreground mb-2 sm:mb-4 text-sm sm:text-base md:text-lg">
                           {language === 'mr' ? 'कार्यक्रम:' : language === 'hi' ? 'कार्यक्रम:' : 'Activities:'}
                         </h3>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
                           {festival.activities.map((activity, idx) => (
                             <div
                               key={idx}
                               className="flex items-center gap-2 text-muted-foreground"
                             >
-                              <div className="w-2 h-2 rounded-full bg-primary" />
-                              <span className="text-sm font-medium">{activity}</span>
+                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary flex-shrink-0" />
+                              <span className="text-xs sm:text-sm font-medium">{activity}</span>
                             </div>
                           ))}
                         </div>
@@ -211,22 +212,22 @@ const Utsav = () => {
                   </div>
 
                   {/* Image Column */}
-                  <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl group ring-4 ring-primary/20 hover:ring-primary/40 transition-all">
+                  <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                    <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl group ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all">
                       <img 
                         src="/src/assets/khandoba-deity.jpeg"
                         alt={festival.name}
-                        className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm p-4 rounded-xl">
+                      <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
+                        <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl">
                           {festivalIcons[index] && 
                             React.createElement(festivalIcons[index], {
-                              className: "w-8 h-8 text-white drop-shadow-lg"
+                              className: "w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white drop-shadow-lg flex-shrink-0"
                             })
                           }
-                          <h3 className="text-2xl font-bold text-white drop-shadow-lg">
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white drop-shadow-lg">
                             {festival.name}
                           </h3>
                         </div>

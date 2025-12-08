@@ -94,14 +94,14 @@ const content = {
       },
       {
         title: 'स्थापत्य कला',
-        content: 'निमगांव-दावडी के श्री खंडोबा मंदिर की रचना प्राचीन महाराष्ट्रीय शैली में है। मंदिर के शिखर पर स्वर्ण कलश है जो दूर से दिखाई देता है। मंदिर परिसर में कई छोटे मंदिर हैं जिनमें भगवान शिव के अन्य रूपों की मूर्तियां हैं।'
+        content: 'निमगांव-दावड़ी में श्री खंडोबा मंदिर प्राचीन महाराष्ट्रीय शैली में बना है। मंदिर के शिखर पर सुनहरा कलश है जो दूर से दिखाई देता है। मंदिर के परिसर में कई छोटे मंदिर हैं जिनमें भगवान शिव के अन्य रूपों की मूर्तियां हैं।'
       }
     ],
     beliefs: {
       title: 'आस्था और श्रद्धा',
       items: [
         'श्री खंडोबा के चरणों में हल्दी चढ़ाने से सभी मनोकामनाएं पूर्ण होती हैं',
-        'भंडारा देकर गरीबों को अन्नदान करने से देव की कृपा मिलती है',
+        'भंडारा देकर गरीबों को भोजन दान करने से देव की कृपा मिलती है',
         'चांपा षष्ठी के दिन दर्शन करने से विशेष पुण्य मिलता है',
         'यहां आने वाले हर भक्त को आध्यात्मिक शांति मिलती है'
       ]
@@ -113,91 +113,84 @@ const History = () => {
   const { language } = useLanguage();
   const t = content[language];
 
-  const sectionColors = [
-    { border: 'border-orange-500/30', gradient: 'from-orange-500 to-red-500', bg: 'from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20' },
-    { border: 'border-yellow-500/30', gradient: 'from-yellow-500 to-orange-500', bg: 'from-yellow-50 to-orange-50 dark:from-yellow-950/20 dark:to-orange-950/20' },
-    { border: 'border-red-500/30', gradient: 'from-red-500 to-pink-500', bg: 'from-red-50 to-pink-50 dark:from-red-950/20 dark:to-pink-950/20' },
-    { border: 'border-pink-500/30', gradient: 'from-pink-500 to-purple-500', bg: 'from-pink-50 to-purple-50 dark:from-pink-950/20 dark:to-purple-950/20' },
-    { border: 'border-purple-500/30', gradient: 'from-purple-500 to-indigo-500', bg: 'from-purple-50 to-indigo-50 dark:from-purple-950/20 dark:to-indigo-950/20' },
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50/50 via-yellow-50/50 to-red-50/50 dark:from-orange-950/10 dark:via-yellow-950/10 dark:to-red-950/10 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
-      <div className="absolute top-1/3 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl translate-x-1/2" />
-      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-      
-      <div className="py-12 px-4 relative z-10">
-        <div className="container mx-auto max-w-4xl">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-block px-6 py-2 bg-white/60 dark:bg-card/60 backdrop-blur-sm rounded-full border border-primary/20 shadow-lg mb-6">
-              <span className="text-sm font-medium text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">
-                ॐ नमः शिवाय
-              </span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
-              {t.title}
-            </h1>
-            <p className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600">
-              {t.subtitle}
-            </p>
+    <div className="min-h-screen bg-background w-full">
+      {/* Hero Section */}
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/20 dark:via-yellow-950/20 dark:to-red-950/20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-accent/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        
+        <div className="container mx-auto w-full max-w-6xl text-center relative z-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 leading-tight">
+            {t.title}
+          </h1>
+          <div className="flex justify-center my-4 sm:my-6">
+            <div className="h-1.5 sm:h-2 w-20 sm:w-24 md:w-32 bg-gradient-to-r from-primary via-secondary to-accent rounded-full shadow-lg" />
           </div>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">{t.subtitle}</p>
+        </div>
+      </section>
 
-          {/* Main Sections */}
-          <div className="space-y-8 mb-12">
-            {t.sections.map((section, index) => {
-              const colors = sectionColors[index % sectionColors.length];
-              return (
-                <Card 
-                  key={index} 
-                  className={`p-8 md:p-10 bg-white/60 dark:bg-card/60 backdrop-blur-sm border-2 ${colors.border} hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 rounded-2xl overflow-hidden relative`}
-                >
-                  {/* Gradient accent bar */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${colors.gradient}`} />
-                  
-                  <div className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${colors.gradient} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
+      {/* Main Content */}
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-orange-50/30 via-yellow-50/30 to-red-50/30 dark:from-orange-950/5 dark:via-yellow-950/5 dark:to-red-950/5 relative overflow-hidden">
+        <div className="absolute top-20 left-10 w-16 sm:w-24 md:w-32 h-16 sm:h-24 md:h-32 bg-primary/5 rounded-full blur-2xl" />
+        <div className="absolute bottom-40 right-10 w-24 sm:w-36 md:w-48 h-24 sm:h-36 md:h-48 bg-secondary/5 rounded-full blur-2xl" />
+        
+        <div className="container mx-auto w-full max-w-6xl relative z-10">
+          <div className="space-y-6 sm:space-y-8 md:space-y-10">
+            {t.sections.map((section, index) => (
+              <Card 
+                key={index} 
+                className="relative overflow-hidden bg-white/60 dark:bg-card/60 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/40 transition-all hover:shadow-2xl group"
+              >
+                {/* Decorative gradient corner */}
+                <div className="absolute top-0 right-0 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-gradient-to-bl from-primary/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 bg-gradient-to-tr from-secondary/20 to-transparent" />
+                
+                <div className="p-4 sm:p-6 md:p-8 lg:p-10 relative z-10">
+                  <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6">
+                    <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 rounded-xl sm:rounded-2xl text-white text-lg sm:text-xl md:text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform">
+                      {index + 1}
                     </div>
-                    <div className="flex-1">
-                      <h2 className={`text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r ${colors.gradient}`}>
-                        {section.title}
-                      </h2>
-                      <p className="text-muted-foreground leading-relaxed text-lg">{section.content}</p>
-                    </div>
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 leading-tight">
+                      {section.title}
+                    </h2>
                   </div>
-                </Card>
-              );
-            })}
+                  <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-justify">
+                    {section.content}
+                  </p>
+                </div>
+              </Card>
+            ))}
           </div>
 
           {/* Beliefs Section */}
-          <Card className="p-8 md:p-10 bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/40 dark:via-yellow-950/40 dark:to-red-950/40 border-4 border-primary/30 shadow-2xl rounded-3xl relative overflow-hidden">
-            {/* Decorative corner elements */}
-            <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-orange-500/20 to-transparent rounded-br-full" />
-            <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-red-500/20 to-transparent rounded-tl-full" />
+          <Card className="mt-8 sm:mt-12 md:mt-16 relative overflow-hidden bg-gradient-to-br from-orange-100/80 via-yellow-100/80 to-red-100/80 dark:from-orange-950/40 dark:via-yellow-950/40 dark:to-red-950/40 border-2 border-primary/30 shadow-xl">
+            <div className="absolute top-0 left-0 w-full h-1 sm:h-1.5 md:h-2 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500" />
+            <div className="absolute top-4 right-4 w-16 sm:w-24 md:w-32 h-16 sm:h-24 md:h-32 bg-primary/10 rounded-full blur-2xl" />
             
-            <h2 className="text-2xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 relative z-10">
-              {t.beliefs.title}
-            </h2>
-            <ul className="space-y-5 relative z-10">
-              {t.beliefs.items.map((item, index) => {
-                const gradients = ['from-orange-500 to-red-500', 'from-yellow-500 to-orange-500', 'from-red-500 to-pink-500', 'from-pink-500 to-purple-500'];
-                return (
-                  <li key={index} className="flex items-start gap-4 bg-white/50 dark:bg-card/50 backdrop-blur-sm p-4 rounded-xl border border-primary/10 hover:border-primary/30 transition-all hover:shadow-lg">
-                    <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${gradients[index % gradients.length]} flex items-center justify-center flex-shrink-0 shadow-md`}>
-                      <span className="text-white text-sm">✦</span>
+            <div className="p-4 sm:p-6 md:p-8 lg:p-10 relative z-10">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+                {t.beliefs.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+                {t.beliefs.items.map((item, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 md:p-5 bg-white/60 dark:bg-card/60 backdrop-blur-sm rounded-lg sm:rounded-xl border border-primary/20 hover:border-primary/40 hover:shadow-lg transition-all"
+                  >
+                    <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center bg-gradient-to-br from-orange-500 to-red-500 rounded-full text-white text-xs sm:text-sm font-bold shadow-md">
+                      ✓
                     </div>
-                    <span className="text-muted-foreground text-lg leading-relaxed">{item}</span>
-                  </li>
-                );
-              })}
-            </ul>
+                    <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-justify">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Card>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
