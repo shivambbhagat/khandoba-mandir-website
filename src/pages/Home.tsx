@@ -88,18 +88,18 @@ const Home = () => {
   const t = content[language];
 
   return (
-    <div>
+    <div className="w-full">
       {/* Running Headline Marquee */}
-      <div className="bg-primary text-primary-foreground py-3 overflow-hidden">
+      <div className="bg-primary text-primary-foreground py-2 sm:py-3 overflow-hidden">
         <div className="animate-marquee whitespace-nowrap inline-block">
-          <span className="text-lg font-semibold mx-4">{t.marquee}</span>
-          <span className="text-lg font-semibold mx-4">{t.marquee}</span>
-          <span className="text-lg font-semibold mx-4">{t.marquee}</span>
+          <span className="text-sm sm:text-base md:text-lg font-semibold mx-2 sm:mx-4">{t.marquee}</span>
+          <span className="text-sm sm:text-base md:text-lg font-semibold mx-2 sm:mx-4">{t.marquee}</span>
+          <span className="text-sm sm:text-base md:text-lg font-semibold mx-2 sm:mx-4">{t.marquee}</span>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] overflow-hidden">
         {/* Video Background */}
         <video 
           autoPlay 
@@ -115,9 +115,9 @@ const Home = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         
         {/* Content at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 pb-12 px-4">
-          <div className="container mx-auto text-center max-w-4xl relative z-10">
-            <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">
+        <div className="absolute bottom-0 left-0 right-0 pb-6 sm:pb-8 md:pb-12 px-3 sm:px-4">
+          <div className="container mx-auto text-center max-w-5xl relative z-10">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl leading-tight">
               {t.hero.title}
             </h1>
           </div>
@@ -125,14 +125,14 @@ const Home = () => {
       </section>
 
       {/* Deity Image and Navigation Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-orange-50/50 via-yellow-50/50 to-red-50/50 dark:from-orange-950/10 dark:via-yellow-950/10 dark:to-red-950/10 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2" />
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-orange-50/50 via-yellow-50/50 to-red-50/50 dark:from-orange-950/10 dark:via-yellow-950/10 dark:to-red-950/10 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
+        <div className="absolute bottom-0 right-0 w-48 sm:w-72 md:w-96 h-48 sm:h-72 md:h-96 bg-secondary/5 rounded-full blur-3xl translate-x-1/2" />
         
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="container mx-auto w-full max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
             {/* Deity Image */}
-            <div className="rounded-2xl overflow-hidden shadow-2xl ring-4 ring-primary/20 hover:ring-primary/40 transition-all hover:scale-[1.02] duration-300">
+            <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all hover:scale-[1.01] sm:hover:scale-[1.02] duration-300">
               <img 
                 src={khandobaDeity} 
                 alt="Shri Khandoba Deity"
@@ -141,11 +141,11 @@ const Home = () => {
             </div>
             
             {/* Navigation Buttons */}
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">
                 {t.navigation.title}
               </h2>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
                 {t.navigation.pages.map((page, index) => {
                   const borderColors = [
                     'border-orange-500/30 hover:border-orange-500',
@@ -167,7 +167,7 @@ const Home = () => {
                     <Link key={index} to={page.path}>
                       <Button 
                         variant="outline" 
-                        className={`w-full h-16 text-lg font-semibold bg-white/60 dark:bg-card/60 backdrop-blur-sm ${borderColors[index]} border-2 ${textColors[index]} hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-xl`}
+                        className={`w-full h-12 sm:h-14 md:h-16 text-sm sm:text-base md:text-lg font-semibold bg-white/60 dark:bg-card/60 backdrop-blur-sm ${borderColors[index]} border-2 ${textColors[index]} hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-lg sm:rounded-xl`}
                       >
                         {page.name}
                       </Button>
@@ -181,29 +181,29 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 dark:from-yellow-950/10 dark:via-orange-950/10 dark:to-red-950/10 relative overflow-hidden">
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 dark:from-yellow-950/10 dark:via-orange-950/10 dark:to-red-950/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--secondary)/0.1),transparent_50%)]" />
         
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">{t.about.title}</h2>
-          <div className="bg-white/60 dark:bg-card/60 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border-2 border-primary/20">
-            <p className="text-lg text-muted-foreground leading-relaxed">{t.about.description}</p>
+        <div className="container mx-auto w-full max-w-5xl text-center relative z-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-600 to-pink-600">{t.about.title}</h2>
+          <div className="bg-white/60 dark:bg-card/60 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl md:rounded-3xl shadow-xl sm:shadow-2xl border-2 border-primary/20">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed text-justify">{t.about.description}</p>
           </div>
         </div>
       </section>
 
       {/* Quick Contact CTA */}
-      <section className="py-16 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
-        <div className="container mx-auto max-w-2xl">
-          <Card className="p-8 text-center bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/40 dark:via-yellow-950/40 dark:to-red-950/40 border-4 border-primary/30 shadow-2xl hover:shadow-primary/20 hover:scale-105 transition-all">
-            <div className="inline-block p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-full mb-4 shadow-lg">
-              <Phone className="w-12 h-12 text-white" />
+      <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
+        <div className="container mx-auto w-full max-w-xl sm:max-w-2xl">
+          <Card className="p-4 sm:p-6 md:p-8 text-center bg-gradient-to-br from-orange-100 via-yellow-100 to-red-100 dark:from-orange-950/40 dark:via-yellow-950/40 dark:to-red-950/40 border-2 sm:border-4 border-primary/30 shadow-xl sm:shadow-2xl hover:shadow-primary/20 hover:scale-[1.02] sm:hover:scale-105 transition-all">
+            <div className="inline-block p-3 sm:p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-full mb-3 sm:mb-4 shadow-lg">
+              <Phone className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">{t.quickContact}</h3>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">{t.quickContact}</h3>
             <a 
               href="tel:9922058279" 
-              className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent hover:scale-110 inline-block transition-transform"
+              className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent hover:scale-110 inline-block transition-transform"
             >
               9922058279
             </a>
