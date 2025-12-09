@@ -2,8 +2,16 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Instagram, Facebook, Youtube, MapPin } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import khandobaLogo from '@/assets/khandoba-logo.jpeg';
+
+// Scroll to top on route change
+const useScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+};
 
 const translations = {
   mr: {
@@ -56,6 +64,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = translations[language];
 
+  // Scroll to top when route changes
+  useScrollToTop();
   const navLinks = [
     { path: '/', label: t.home },
     { path: '/history', label: t.history },
