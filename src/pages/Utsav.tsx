@@ -211,28 +211,43 @@ const Utsav = () => {
                     </div>
                   </div>
 
-                  {/* Image Column */}
+                  {/* Image/Video Column */}
                   <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                    <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl group ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all">
-                      <img 
-                        src="/src/assets/khandoba-deity.jpeg"
-                        alt={festival.name}
-                        className="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                      <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-                        <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl">
-                          {festivalIcons[index] && 
-                            React.createElement(festivalIcons[index], {
-                              className: "w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white drop-shadow-lg flex-shrink-0"
-                            })
-                          }
-                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white drop-shadow-lg">
-                            {festival.name}
-                          </h3>
+                    {index === 0 ? (
+                      /* Instagram Reel for Champa Shashthi */
+                      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all bg-white dark:bg-card">
+                        <div className="w-full flex justify-center">
+                          <iframe
+                            src="https://www.instagram.com/reel/DRfL6gZDH2G/embed"
+                            className="w-full min-h-[450px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] border-0"
+                            allowFullScreen
+                            scrolling="no"
+                            title="Champa Shashthi Reel"
+                          />
                         </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl group ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all">
+                        <img 
+                          src="/src/assets/khandoba-deity.jpeg"
+                          alt={festival.name}
+                          className="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                        <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
+                          <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl">
+                            {festivalIcons[index] && 
+                              React.createElement(festivalIcons[index], {
+                                className: "w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white drop-shadow-lg flex-shrink-0"
+                              })
+                            }
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white drop-shadow-lg">
+                              {festival.name}
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
