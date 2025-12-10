@@ -41,6 +41,13 @@ const content = {
         description: 'चैत्र पौर्णिमेला श्री खंडोबा मंदिरात विशेष उत्सव साजरा केला जातो. या दिवशी मोठ्या प्रमाणावर भाविक दर्शनासाठी येतात.',
         significance: 'चैत्र महिन्याची पौर्णिमा खंडोबा भक्तांसाठी अत्यंत पवित्र मानली जाते.',
         activities: ['विशेष पूजा', 'भांडारा', 'जागरण गोंधळ', 'पालखी']
+      },
+      {
+        name: 'बागड यात्रा',
+        date: 'चैत्र महिना',
+        description: 'बागड यात्रा हा खंडोबाच्या भक्तांचा पारंपारिक उत्सव आहे. या यात्रेत भक्त बागड घेऊन मंदिराकडे जातात.',
+        significance: 'बागड यात्रा खंडोबाच्या भक्तीची आणि श्रद्धेची परंपरा दर्शवते.',
+        activities: ['बागड यात्रा', 'भांडारा', 'जागरण गोंधळ', 'विशेष पूजा']
       }
     ]
   },
@@ -82,6 +89,13 @@ const content = {
         description: 'A special festival is celebrated at Shri Khandoba Temple on Chaitra Pournima. A large number of devotees visit for darshan on this day.',
         significance: 'The full moon of Chaitra month is considered extremely sacred for Khandoba devotees.',
         activities: ['Special Puja', 'Mass Feast', 'Jagaran Gondhal', 'Palakhi Procession']
+      },
+      {
+        name: 'Bagad Yatra',
+        date: 'Chaitra Month',
+        description: 'Bagad Yatra is a traditional festival of Khandoba devotees. During this yatra, devotees carry the Bagad to the temple.',
+        significance: 'Bagad Yatra represents the tradition of devotion and faith towards Khandoba.',
+        activities: ['Bagad Yatra', 'Mass Feast', 'Jagaran Gondhal', 'Special Puja']
       }
     ]
   },
@@ -123,12 +137,19 @@ const content = {
         description: 'चैत्र पूर्णिमा पर श्री खंडोबा मंदिर में विशेष उत्सव मनाया जाता है। इस दिन बड़ी संख्या में भक्त दर्शन के लिए आते हैं।',
         significance: 'चैत्र महीने की पूर्णिमा खंडोबा भक्तों के लिए अत्यंत पवित्र मानी जाती है।',
         activities: ['विशेष पूजा', 'भंडारा', 'जागरण गोंदल', 'पालखी']
+      },
+      {
+        name: 'बागड यात्रा',
+        date: 'चैत्र महीना',
+        description: 'बागड यात्रा खंडोबा भक्तों का पारंपरिक उत्सव है। इस यात्रा में भक्त बागड लेकर मंदिर की ओर जाते हैं।',
+        significance: 'बागड यात्रा खंडोबा के प्रति भक्ति और श्रद्धा की परंपरा को दर्शाती है।',
+        activities: ['बागड यात्रा', 'भंडारा', 'जागरण गोंदल', 'विशेष पूजा']
       }
     ]
   }
 };
 
-const festivalIcons = [Sparkles, Sun, Moon, Star, Calendar];
+const festivalIcons = [Sparkles, Sun, Moon, Star, Calendar, Star];
 
 const Utsav = () => {
   const { language } = useLanguage();
@@ -265,7 +286,7 @@ const Utsav = () => {
                           />
                         </div>
                       </div>
-                    ) : (
+                    ) : index === 4 ? (
                       /* Instagram Reel for Chaitra Pournima */
                       <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all bg-white dark:bg-card">
                         <div className="w-full flex justify-center">
@@ -275,6 +296,19 @@ const Utsav = () => {
                             allowFullScreen
                             scrolling="no"
                             title="Chaitra Pournima Reel"
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      /* Instagram Reel for Bagad Yatra */
+                      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all bg-white dark:bg-card">
+                        <div className="w-full flex justify-center">
+                          <iframe
+                            src="https://www.instagram.com/reel/DGA25faooPN/embed"
+                            className="w-full min-h-[450px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] border-0"
+                            allowFullScreen
+                            scrolling="no"
+                            title="Bagad Yatra Reel"
                           />
                         </div>
                       </div>
