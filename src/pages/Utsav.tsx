@@ -252,6 +252,19 @@ const Utsav = () => {
                           />
                         </div>
                       </div>
+                    ) : index === 3 ? (
+                      /* Instagram Reel for Vijayadashami (Dasara) */
+                      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all bg-white dark:bg-card">
+                        <div className="w-full flex justify-center">
+                          <iframe
+                            src="https://www.instagram.com/reel/DBBT_cOAfHi/embed"
+                            className="w-full min-h-[450px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] border-0"
+                            allowFullScreen
+                            scrolling="no"
+                            title="Vijayadashami Dasara Reel"
+                          />
+                        </div>
+                      </div>
                     ) : (
                       <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl group ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all">
                         <img 
