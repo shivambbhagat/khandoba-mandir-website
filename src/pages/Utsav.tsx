@@ -22,11 +22,11 @@ const content = {
         activities: ['रुद्राभिषेक', 'हवन', 'अन्नदान', 'भजन-कीर्तन']
       },
       {
-        name: 'कोजागिरी पौर्णिमा',
-        date: 'आश्विन पौर्णिमा',
-        description: 'पौर्णिमेच्या रात्री विशेष पूजा आणि जागरण होते. भाविक रात्रभर मंदिरात भजन-कीर्तन करतात.',
-        significance: 'या रात्री देवता भक्तांच्या मनोकामना पूर्ण करतात असे मानले जाते.',
-        activities: ['रात्री जागरण', 'चंद्रदर्शन पूजा', 'प्रसाद वाटप', 'भजन मंडळी']
+        name: 'माघ पौर्णिमा - शाही लग्न सोहळा',
+        date: 'माघ पौर्णिमा',
+        description: 'माघ पौर्णिमेला श्री खंडोबा आणि मल्हाळसाई यांचा शाही लग्न सोहळा साजरा केला जातो. हा उत्सव अत्यंत भव्य आणि दिमाखदार असतो.',
+        significance: 'खंडोबा आणि मल्हाळसा यांच्या दिव्य विवाहाचा हा पवित्र दिवस आहे.',
+        activities: ['शाही लग्न सोहळा', 'विशेष पूजा', 'भांडारा', 'जागरण गोंधळ']
       },
       {
         name: 'विजयादशमी (दसरा)',
@@ -63,11 +63,11 @@ const content = {
         activities: ['Rudrabhishek', 'Havan', 'Food Donation', 'Bhajan-Kirtan']
       },
       {
-        name: 'Kojagiri Purnima',
-        date: 'Ashwin Purnima',
-        description: 'Special puja and night vigil on full moon night. Devotees sing bhajans throughout the night.',
-        significance: 'It is believed that the deity fulfills wishes of devotees on this night.',
-        activities: ['Night Vigil', 'Moon Worship', 'Prasad Distribution', 'Bhajan Groups']
+        name: 'Magh Purnima - Royal Wedding Ceremony',
+        date: 'Magh Purnima',
+        description: 'On Magh Purnima, the grand royal wedding ceremony (Shahi Lagan Sohala) of Shri Khandoba and Mhalsa is celebrated with great pomp and splendor.',
+        significance: 'This sacred day commemorates the divine marriage of Khandoba and Mhalsa.',
+        activities: ['Royal Wedding Ceremony', 'Special Puja', 'Mass Feast', 'Jagaran Gondhal']
       },
       {
         name: 'Vijayadashami (Dussehra)',
@@ -104,11 +104,11 @@ const content = {
         activities: ['रुद्राभिषेक', 'हवन', 'अन्नदान', 'भजन-कीर्तन']
       },
       {
-        name: 'कोजागिरी पूर्णिमा',
-        date: 'आश्विन पूर्णिमा',
-        description: 'पूर्णिमा की रात विशेष पूजा और जागरण होता है। भक्त रात भर भजन-कीर्तन करते हैं।',
-        significance: 'यह माना जाता है कि इस रात देवता भक्तों की मनोकामनाएं पूरी करते हैं।',
-        activities: ['रात्रि जागरण', 'चंद्र पूजा', 'प्रसाद वितरण', 'भजन मंडली']
+        name: 'माघ पूर्णिमा - शाही लग्न सोहाला',
+        date: 'माघ पूर्णिमा',
+        description: 'माघ पूर्णिमा पर श्री खंडोबा और मल्हाळसाई का शाही लग्न सोहाला धूमधाम से मनाया जाता है। यह उत्सव अत्यंत भव्य और शानदार होता है।',
+        significance: 'खंडोबा और मल्हाळसा के दिव्य विवाह का यह पवित्र दिन है।',
+        activities: ['शाही लग्न सोहाला', 'विशेष पूजा', 'भंडारा', 'जागरण गोंदल']
       },
       {
         name: 'विजयादशमी (दशहरा)',
@@ -236,6 +236,19 @@ const Utsav = () => {
                             allowFullScreen
                             scrolling="no"
                             title="Somavati Amavasya Reel"
+                          />
+                        </div>
+                      </div>
+                    ) : index === 2 ? (
+                      /* Instagram Reel for Magh Purnima - Shahi Lagan Sohala */
+                      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all bg-white dark:bg-card">
+                        <div className="w-full flex justify-center">
+                          <iframe
+                            src="https://www.instagram.com/reel/DF-BMtsInX6/embed"
+                            className="w-full min-h-[450px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] border-0"
+                            allowFullScreen
+                            scrolling="no"
+                            title="Magh Purnima Shahi Lagan Reel"
                           />
                         </div>
                       </div>
