@@ -36,11 +36,11 @@ const content = {
         activities: ['शस्त्रपूजा', 'शोभायात्रा', 'सांस्कृतिक कार्यक्रम', 'मेळावा']
       },
       {
-        name: 'कार्तिक पौर्णिमा',
-        date: 'कार्तिक पौर्णिमा',
-        description: 'दिव्य प्रकाशाचा उत्सव. मंदिराला दिव्यांनी सजवले जाते.',
-        significance: 'या दिवशी केलेल्या दानाचे विशेष महत्त्व आहे.',
-        activities: ['दीप उत्सव', 'महाआरती', 'तुलादान', 'साधुसंत आवभगत']
+        name: 'चैत्र पौर्णिमा',
+        date: 'चैत्र पौर्णिमा',
+        description: 'चैत्र पौर्णिमेला श्री खंडोबा मंदिरात विशेष उत्सव साजरा केला जातो. या दिवशी मोठ्या प्रमाणावर भाविक दर्शनासाठी येतात.',
+        significance: 'चैत्र महिन्याची पौर्णिमा खंडोबा भक्तांसाठी अत्यंत पवित्र मानली जाते.',
+        activities: ['विशेष पूजा', 'भांडारा', 'जागरण गोंधळ', 'पालखी']
       }
     ]
   },
@@ -77,11 +77,11 @@ const content = {
         activities: ['Weapon Worship', 'Procession', 'Cultural Programs', 'Fair']
       },
       {
-        name: 'Kartik Purnima',
-        date: 'Kartik Purnima',
-        description: 'Festival of divine lights. The temple is decorated with lamps.',
-        significance: 'Donations made on this day are considered especially meritorious.',
-        activities: ['Lamp Festival', 'Grand Aarti', 'Tuladaan', 'Sadhu Hospitality']
+        name: 'Chaitra Pournima',
+        date: 'Chaitra Pournima',
+        description: 'A special festival is celebrated at Shri Khandoba Temple on Chaitra Pournima. A large number of devotees visit for darshan on this day.',
+        significance: 'The full moon of Chaitra month is considered extremely sacred for Khandoba devotees.',
+        activities: ['Special Puja', 'Mass Feast', 'Jagaran Gondhal', 'Palakhi Procession']
       }
     ]
   },
@@ -118,11 +118,11 @@ const content = {
         activities: ['शस्त्र पूजा', 'शोभायात्रा', 'सांस्कृतिक कार्यक्रम', 'मेला']
       },
       {
-        name: 'कार्तिक पूर्णिमा',
-        date: 'कार्तिक पूर्णिमा',
-        description: 'दिव्य प्रकाश का उत्सव। मंदिर को दीपों से सजाया जाता है।',
-        significance: 'इस दिन किए गए दान का विशेष महत्व है।',
-        activities: ['दीप उत्सव', 'महाआरती', 'तुलादान', 'साधु सत्कार']
+        name: 'चैत्र पूर्णिमा',
+        date: 'चैत्र पूर्णिमा',
+        description: 'चैत्र पूर्णिमा पर श्री खंडोबा मंदिर में विशेष उत्सव मनाया जाता है। इस दिन बड़ी संख्या में भक्त दर्शन के लिए आते हैं।',
+        significance: 'चैत्र महीने की पूर्णिमा खंडोबा भक्तों के लिए अत्यंत पवित्र मानी जाती है।',
+        activities: ['विशेष पूजा', 'भंडारा', 'जागरण गोंदल', 'पालखी']
       }
     ]
   }
@@ -266,24 +266,16 @@ const Utsav = () => {
                         </div>
                       </div>
                     ) : (
-                      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl group ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all">
-                        <img 
-                          src="/src/assets/khandoba-deity.jpeg"
-                          alt={festival.name}
-                          className="w-full h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                        <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-                          <div className="flex items-center gap-2 bg-gradient-to-r from-orange-500/90 to-red-500/90 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-xl">
-                            {festivalIcons[index] && 
-                              React.createElement(festivalIcons[index], {
-                                className: "w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white drop-shadow-lg flex-shrink-0"
-                              })
-                            }
-                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white drop-shadow-lg">
-                              {festival.name}
-                            </h3>
-                          </div>
+                      /* Instagram Reel for Chaitra Pournima */
+                      <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl ring-2 sm:ring-4 ring-primary/20 hover:ring-primary/40 transition-all bg-white dark:bg-card">
+                        <div className="w-full flex justify-center">
+                          <iframe
+                            src="https://www.instagram.com/reel/DIVcrohI0an/embed"
+                            className="w-full min-h-[450px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] border-0"
+                            allowFullScreen
+                            scrolling="no"
+                            title="Chaitra Pournima Reel"
+                          />
                         </div>
                       </div>
                     )}
